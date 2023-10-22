@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Menu from "../components/Menu.astro";
+import Frame from "../components/Frame.astro";
+
 const pageTitle = "Home";
+const width = "50vw";
+const height = "66vh";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <Menu />
+    <Frame width={width} height={height}/>
 </BaseLayout>
