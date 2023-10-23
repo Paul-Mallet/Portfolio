@@ -1,14 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Menu from "../components/Menu.astro";
-import Frame from "../components/Frame.astro";
+import DarkMode from "../components/Handwriting/DarkMode.astro";
+import Signature from "../components/Handwriting/Signature.astro";
+import Sound from "../components/Handwriting/Sound.astro";
+import Socials from "../components/Handwriting/Socials.astro";
 
 const pageTitle = "Home";
 const width = "50vw";
 const height = "66vh";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} width={width} height={height}>
     <Menu />
-    <Frame width={width} height={height}/>
+    <DarkMode />
+    <Signature />
+    <Sound />
+    <Socials />
 </BaseLayout>

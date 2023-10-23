@@ -1,7 +1,10 @@
 ---
 import Buttons from "../components/Buttons.astro";
+import Frame from "../components/Frame.astro";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
+const { width } = Astro.props;
+const { height } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -13,6 +16,7 @@ const { pageTitle } = Astro.props;
 </head>
 <body>
     <slot />
+    <Frame width={width} height={height}/>
     <Buttons />
 </body>
 </html>
