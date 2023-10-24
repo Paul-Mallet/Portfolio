@@ -1,10 +1,204 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Projects";
+const pageTitle = "Contact";
 const width = "72vw";
 const height = "72vh";
 ---
 
 <BaseLayout pageTitle={pageTitle} width={width} height={height}>
+    <main>
+        <div class="left">
+            <h1>Contact<span style="color: #de4900;">.</span></h1>
+            <div class="form">
+                <div class="name_job">
+                    <div class="name_left">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" maxlength="56" placeholder="ex: Paul Mallet" required></input>
+                    </div>
+                    <div class="job_right">
+                        <label for="job">Your job</label>
+                        <input type="text" id="job" name="job" maxlength="56" placeholder="ex: Software Engineer" required></input>
+                    </div>
+                </div>
+                <div class="others">
+                    <div class="email">
+                        <label for="email">Your Email</label>
+                        <input type="text" id="email" name="email" maxlength="56" placeholder="ex: email@gmail.com" required></input>
+                    </div>
+                    <div class="message">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" maxlength="240" placeholder="Type your request here..." required></textarea>
+                    </div>
+                    <div class="captcha">
 
+                    </div>
+                    <button>Send Message</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <svg class="paper_plane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/>
+            </svg>
+            <div class="infos">
+                <div class="my_address">
+                    <span>
+                        <svg class="address" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                    </span>
+                    <p>
+                        211 Allée Saint Sulpice, 76190</br>
+                        Hautot Saint Sulpice
+                    </p>
+                </div>
+                <p class="my_phone">
+                    <span>
+                        <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                        </svg>
+                    </span>
+                    +33 07 66 28 44 60
+                </p>
+                <p class="my_email">
+                    <span>
+                        <svg class="envelop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                        </svg>
+                    </span>
+                    contact@paulmallet.pf
+                </p>
+            </div>
+        </div>
+    </main>
 </BaseLayout>
+
+<style>
+    main
+    {
+        position: relative;
+        display: flex;
+        width: 72vw;
+        height: 72vh;
+        padding: 32px 0 32px 32px;
+    }
+
+    .left
+    {
+        width: 50%;
+    }
+
+    .right
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    span
+    {
+        height: 16px;
+    }
+
+    .left h1
+    {
+        margin-bottom: 12px;
+    }
+
+    .left .form
+    {
+        padding: 24px;
+        border-radius: 24px;
+        box-shadow: 4px 4px 12px rgb(186, 196, 214);
+    }
+
+    .left .form label
+    {
+        font-size: 1rem;
+    }
+
+    .left .form .name_job,
+    .left .form .others .email,
+    .left .form .others .message
+    {
+        margin-bottom: 24px;
+    }
+
+    .left .form .name_job
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left .form .name_job .name_left,
+    .left .form .name_job .job_right
+    {
+        width: 47.5%;
+    }
+
+    .left .form .name_job .name_left input,
+    .left .form .name_job .job_right input,
+    .left .form .others .email input,
+    .left .form .others .message textarea
+    {
+        font-family: 'Roboto Mono', monospace;
+        background: #d6dee9;
+        width: 100%;
+        margin-top: 4px;
+        padding: 12px;
+        border: none;
+        border-radius: 12px;
+    }
+
+    .left .form .name_job .name_left input:focus,
+    .left .form .name_job .job_right input:focus,
+    .left .form .others .email input:focus,
+    .left .form .others .message textarea:focus
+    {
+        outline: none;
+    }
+
+    .left .form .others .message textarea
+    {
+        resize: none;
+    }
+
+    .left .form .others button
+    {
+        font-size: 1rem;
+        color: #ecf0f3;
+        background: #e44d26;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 32px;
+        cursor: pointer;
+    }
+
+    .right .paper_plane
+    {
+        width: 64px;
+        margin-bottom: 8vh;
+    }
+
+    .right .my_address
+    {
+        display: flex;
+        margin-bottom: 8vh;
+    }
+
+    .right .my_email
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .right .my_address .address,
+    .right .my_phone .phone,
+    .right .my_email .envelop
+    {
+        width: 16px;
+        margin-right: 12px;
+        opacity: .4;
+    }
+</style>
