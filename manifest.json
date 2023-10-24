@@ -1,0 +1,18 @@
+{
+    "manifest_version": 1,
+    "name": "Paul Mallet's Portfolio",
+    "version": "0.0.1",
+
+    "default_locale": "en",
+    "description": "A modern portfolio using Astro.js",
+    "icons": {
+        "src": "google-touch-icon.png",
+        "sizes": "512x512"
+    },
+
+    "author": "contact@paulmallet.pf",
+    "background": "#ecf0f3",
+    "display": "fullscreen",
+    "short_name": "PM Portfolio",
+    "theme_color": "#ecf0f3"
+}
