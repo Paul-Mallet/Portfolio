@@ -29,7 +29,6 @@ body
     background: var(--clr-light);
     color: var(--clr-black);
     font-size: .875rem;
-    line-height: 1.5;
 }
 
 li
