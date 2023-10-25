@@ -1,4 +1,4 @@
-const audio = document.querySelector("audio");
+const audio = new Audio("sounds/background.mp3");
 const sound_btn = document.querySelector(".right .hand_sound button");
 sound_btn.addEventListener("click", toggle);
 
