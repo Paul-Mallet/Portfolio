@@ -46,7 +46,7 @@ const height = "72vh";
                     <svg xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512">
                         <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" viewBox="0 0 384 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" style="margin-left: .4vw;" viewBox="0 0 384 512">
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                     </svg>
                 </div>
@@ -69,16 +69,21 @@ const height = "72vh";
                 <div class="faq">
                     <div class="top">
                         <p>Did you see something ?</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" style="rotate: 45deg; cursor: pointer;" viewBox="0 0 384 512">
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-                        </svg>
+                        <div class="btns">
+                            <svg class="plus not_display" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
+                                <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
+                            </svg>
+                            <svg class="minus" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
+                                <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM152 232H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="separator"></div>
-                    <p>Lorem ipsum dolor sit amet, consecta adipiscing elitm sed do eiusmod tempor incididunt ut labore et dolo.</p>
+                    <p class="content">Lorem ipsum dolor sit amet, consecta adipiscing elitm sed do eiusmod tempor incididunt ut labore et dolo.</p>
                 </div>
                 <div class="stats">
-                    <p class="score">Score: 0</p>
-                    <p class="timeout">00:10</p>
+                    <p class="score">Score: <span>0</span></p>
+                    <p class="timeout">00:<span>10</span></p>
                 </div>
             </div>
         </section>
@@ -134,6 +139,11 @@ const height = "72vh";
         background: #d6dee9;
         border-radius: 10px;
         opacity: .8;
+    }
+
+    .left .data::-webkit-scrollbar-corner
+    {
+        background: #ecf0f3;
     }
 
     strong
@@ -259,6 +269,7 @@ const height = "72vh";
         top: 12vh;
         left: 24%;
         cursor: pointer;
+        z-index: 10;
     }
 
     .right .orbit
@@ -269,36 +280,123 @@ const height = "72vh";
 
     .right .html.orbit
     {
-        top: 16vh;
+        top: 18vh;
         left: 37%;
         width: 1.6em;
         height: 1.6em;
+        animation: aroundhtml 4s ease-in-out 0s infinite normal none;
+    }
+
+    @keyframes aroundhtml
+    {
+        0%
+        {
+            top: 18vh;
+            left: 37%;
+            z-index: 0;
+        }
+        50%
+        {
+            top: 44vh;
+            left: 74%;
+            z-index: 0;
+        }
+        55%
+        {
+            z-index: 2;
+        }
+        100%
+        {
+            top: 18vh;
+            left: 37%;
+            z-index: 2;
+        }
     }
 
     .right .css.orbit
     {
-        bottom: 16vh;
+        bottom: 12vh;
         right: 33%;
         width: 2em;
         height: 2em;
+        animation: aroundcss 4s ease-in-out 0s infinite normal none;
+    }
+
+    @keyframes aroundcss
+    {
+        0%
+        {
+            top: 44vh;
+            left: 66%;
+            z-index: 2;
+        }
+        50%
+        {
+            top: 16vh;
+            left: 33%;
+            z-index: 2;
+        }
+        54%
+        {
+            z-index: 0;
+        }
+        100%
+        {
+            top: 44vh;
+            left: 66%;
+            z-index: 0;
+        }
     }
 
     .right .js.orbit
     {
-        top: 18vh;
+        top: 20vh;
         right: 50%;
         width: 1.2em;
         height: 1.2em;
+        animation: aroundjs 4s ease-in-out 0s infinite normal none;
+    }
+
+    @keyframes aroundjs
+    {
+        0%
+        {
+            top: 20vh;
+            left: 50%;
+            z-index: 0;
+        }
+        50%
+        {
+            top: 44vh;
+            left: 87%;
+            z-index: 0;
+        }
+        58%
+        {
+            z-index: 2;
+        }
+        100%
+        {
+            top: 20vh;
+            left: 50%;
+            z-index: 2;
+        }
     }
 
     .right .faq
     {
+        position: absolute;
+        top: 42%;
+        left: 5%;
+        right: 5%;
         width: 80%;
         margin: 0 auto;
-        padding: 12px;
+        padding: 12px 12px 6px;
+        background: #ecf0f3;
         border-radius: 16px;
         font-size: calc(.18em + .8vw);
         box-shadow: 4px 4px 8px rgb(186,196,214);
+        z-index: 1;
     }
 
     .right .faq .top
@@ -310,12 +408,36 @@ const height = "72vh";
         font-weight: 600;
     }
 
+    .right .faq .top .plus,
+    .right .faq .top .minus
+    {
+        cursor: pointer;
+    }
+
+    .not_display
+    {
+        display: none;
+    }
+
     .right .faq .separator
     {
         width: 100%;
         height: 1px;
         margin: 2px 0 8px;
         background: rgba(186,196,214, .4);
+    }
+
+    .right .faq .content
+    {
+        height: 10vh;
+        overflow-y: hidden;
+        transition: .6s ease;
+    }
+
+    .hidden
+    {
+        height: 0vh !important;
+        transition: .6s ease;
     }
 
     .right .shuttle_space
@@ -326,10 +448,12 @@ const height = "72vh";
         flex-direction: column;
         bottom: 8vh;
         left: 2vw;
+        z-index: 2;
     }
 
     .right .shuttle_space svg
     {
+        rotate: -45deg;
         cursor: pointer;
     }
 
@@ -339,22 +463,52 @@ const height = "72vh";
         font-size: calc(.24em + .8vw);
         font-weight: 600;
         opacity: .4;
+        animation: hold 3s ease-in-out 0s infinite normal none;
+    }
+
+    @keyframes hold
+    {
+        0%
+        {
+            opacity: .4;
+        }
+        45%
+        {
+            opacity: 0;
+        }
+        55%
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: .4;
+        }
     }
 
     .right .score, .right .timeout
     {
+        display: flex;
         font-weight: 600;
     }
 
     .right .score
     {
         font-size: calc(.36rem + .8vw);
+        z-index: 1;
     }
 
     .right .timeout
     {
         font-size: calc(1.2em + 1vw);
         margin-bottom: -4px;
+    }
+
+    .right .timeout span
+    {
+        color: #e44d26;
+        margin-left: 0;
+        margin-right: calc(12px + .6vw);
     }
 
     .right .stats
@@ -364,3 +518,5 @@ const height = "72vh";
         justify-content: space-between;
     }
 </style>
+
+<script src="../scripts/little_js.js" />
