@@ -17,6 +17,7 @@ function toggle()
         audio.play();
         audio.volume = 0.08;
         not.classList.add("play");
+        audio.loop = true;
         localStorage.setItem("bg_sound", "play");
     }
 }
