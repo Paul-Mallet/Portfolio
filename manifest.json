@@ -5,10 +5,10 @@
 
     "default_locale": "en",
     "description": "A modern portfolio using Astro.js",
-    "icons": {
+    "icons": [{
         "src": "google-touch-icon.png",
         "sizes": "512x512"
-    },
+    }],
 
     "author": "contact@paulmallet.pf",
     "background": "#ecf0f3",
