@@ -40,3 +40,24 @@ a
 {
     text-decoration: none;
 }
+
+/*View Transitions*/
+
+::view-transition-old(frame_tr),
+::view-transition-new(frame_tr) {
+  /*animation: none;*/
+  mix-blend-mode: normal;
+  height: 100%;
+  overflow: clip;
+  background: #ecf0f3;
+  border-radius: 32px;
+}
+
+/* The old view is the thumbnail */
+::view-transition-old(frame_tr) {
+  object-fit: contain;
+}
+
+::view-transition-new(frame_tr) {
+  background: #ecf0f3;
+}
