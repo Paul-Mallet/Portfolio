@@ -12,6 +12,15 @@
             </button>
         </div>
         <div class="hand_signature">
+            <p class="none">
+                Paul<span style="color: #de4900;">.</span></br>Mallet
+            </p>
+            <a href="http://localhost:4321/" class="none">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" style="opacity: .4;" viewBox="0 0 448 512">
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                </svg>
+                <p>Back</p>
+            </a>
         </div>
     </div>
     <div class="right">
@@ -20,7 +29,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height=".9em" viewBox="0 0 512 512">
                     <path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
                 </svg>
-                <svg class="not" xmlns="http://www.w3.org/2000/svg" height=".48em" viewBox="0 0 512 512">
+                <svg class="not" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 512 512">
                     <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
                 </svg>
             </button>
@@ -129,11 +138,27 @@
         opacity: 1;
     }
 
-    .signature
+    .hand_signature p
     {
         font-size: 1.28rem;
         font-weight: 600;
         margin-bottom: -4%;
+    }
+
+    .hand_signature a
+    {
+        display: flex;
+        align-items: end;
+        color: #1a1a1a;
+        font-size: 1.28rem;
+        font-weight: 600;
+        margin-bottom: -4%;
+    }
+
+    .hand_signature a p
+    {
+        margin-left: 8px;
+        opacity: .4;
     }
 
     .back
@@ -159,16 +184,16 @@
     .sound .not
     {
         position: absolute;
-        bottom: 5px;
-        right: 5px;
-        fill: #ff5f7a;
+        bottom: 0;
+        right: 0;
+        fill: #e44d26;
         border-radius: 8px;
-        opacity: 1;
+        opacity: .72;
     }
 
-    .play
+    .none
     {
-        display: none;
+        display: none !important;
     }
 
     .hand_socials
@@ -183,5 +208,4 @@
     }
 </style>
 
-<script src="../scripts/sound.js" />
-<script src="../scripts/signature.js" />
+<script src="../scripts/buttons.js"/>
