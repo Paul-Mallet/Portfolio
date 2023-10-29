@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Frame from "../components/Frame.astro";
 const pageTitle = "About";
 const width = "72vw";
 const height = "72vh";
+const frame_tr = "frame_tr";
 ---
 
-<BaseLayout pageTitle={pageTitle} width={width} height={height}>
-
+<BaseLayout pageTitle={pageTitle} width={width} height={height} frame_tr={frame_tr}>
+    <Frame width={width} height={height} frame_tr={frame_tr}>
+        
+    </Frame>
 </BaseLayout>
