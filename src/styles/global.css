@@ -2,49 +2,55 @@
 
 :root
 {
-    /*Colors*/
-    --clr-dark: #1a1a1a;
-    --clr-dark-2: #000c32;
-    --clr-light: #ecf0f3;
-    --clr-orange: #de4900;
-    /*Fonts*/
-    --ff-primary: 'Roboto Mono', monospace;
+  /*Colors*/
+  --clr-dark: #1a1a1a;
+  --clr-dark-2: #000c32;
+  --clr-light: #ecf0f3;
+  --clr-orange: #de4900;
+  /*Fonts*/
+  --ff-primary: 'Roboto Mono', monospace;
 }
 
 *, ::after, ::before
 {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    font-family: var(--ff-primary);
-    background: var(--clr-light);
-    color: var(--clr-black);
-    font-size: .875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--ff-primary);
+  background: var(--clr-light);
+  color: var(--clr-black);
+  font-size: .875rem;
+}
+
+h1
+{
+  font-size: calc(1rem + 1vw);
 }
 
 li
 {
-    list-style: none;
+  list-style: none;
 }
 
 a
 {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*View Transitions*/
 
 ::view-transition-old(frame_tr),
-::view-transition-new(frame_tr) {
+::view-transition-new(frame_tr)
+{
   /*animation: none;*/
   mix-blend-mode: normal;
   height: 100%;
@@ -53,11 +59,7 @@ a
   border-radius: 32px;
 }
 
-/* The old view is the thumbnail */
-::view-transition-old(frame_tr) {
+::view-transition-old(frame_tr)
+{
   object-fit: contain;
-}
-
-::view-transition-new(frame_tr) {
-  background: #ecf0f3;
 }
