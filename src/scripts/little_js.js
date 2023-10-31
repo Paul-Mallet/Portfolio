@@ -25,40 +25,105 @@ document.addEventListener("astro:page-load", () => {
 
     // SHUTTLE_SPACE //
     const container_right = document.querySelector(".right");
-    const shuttle_container = document.querySelector(".right .shuttle_container");
-    const shuttle_space = document.querySelector(".right .shuttle_space");
-    const shuttle_space_text = document.querySelector(".right .shuttle_space p");
-    let left;
-    let top;
+    const s_div = document.querySelector(".right .shuttle_container");
+    const s_space = document.querySelector(".right .shuttle_space");
+    const s_space_text = document.querySelector(".right .shuttle_space p");
+    const rect = container_right.getBoundingClientRect();
 
-    shuttle_space.addEventListener("mousedown", shuttle_moves);
-    shuttle_space.addEventListener("mouseup", shuttle_stop);
+    let isMoving = false;
+    let x = 0;
+    let y = 0;
+    s_space.addEventListener("mousedown", (e) => {
+        isMoving = true;
+        s_space_text.style.display = "none";
+        s_div.style.zIndex = "11";
+    });
 
-    function shuttle_moves()
+    container_right.addEventListener("mousemove", (e) => {
+        if (isMoving)
+        {
+            x = e.clientX - Math.floor(rect.left + (s_space.offsetWidth / 2));
+            y = e.clientY - Math.floor(rect.top + (s_space.offsetHeight / 2));
+            if ((x >= (rect.width - (1 + (s_space.offsetWidth / 2)))
+            || x <= 1 - (s_space.offsetWidth / 2))
+            || (y >= (rect.height - (1 + (s_space.offsetHeight / 2)))
+            || y <= 1 - (s_space.offsetHeight / 2)))
+            {
+                x = 64;
+                y = 370;
+            }
+            s_space.style.left = ((x / rect.width) * 100) + "%";
+            s_space.style.top = ((y / rect.height) * 100) + "%";
+        }
+    });
+
+    document.addEventListener("mouseup", () => {
+        if (isMoving)
+        {
+            isMoving = false;
+            s_space_text.style.display = "block";
+            s_div.style.zIndex = "0";
+        }
+    });
+
+    // TEST //
+    /*const div = document.querySelector("body div"); //right
+    const test = document.querySelector("body .test"); //space
+    const rect2 = div.getBoundingClientRect();
+
+    let isMoving2 = false;
+    let x2 = 0;
+    let y2 = 0;
+    test.addEventListener("mousedown", (e) => {
+        isMoving2 = true;
+    });
+
+    div.addEventListener("mousemove", (e) => {
+        if (isMoving2)
+        {
+            x2 = e.clientX - Math.floor(rect2.left + (test.offsetWidth / 2));
+            y2 = e.clientY - Math.floor(rect2.top + (test.offsetHeight / 2));
+            if ((x2 >= (rect2.width - 34) || x2 <= -32)
+            || (y2 >= (rect2.height - 19) || y2 <= -17))
+            {
+                x2 = 64;
+                y2 = 370;
+            }
+            test.style.left = ((x2 / rect2.width) * 100) + "%";
+            test.style.top = ((y2 / rect2.height) * 100) + "%";
+        }
+    });*/
+
+    /*function rotate()
     {
-        shuttle_container.classList.add("extend_container");
-        shuttle_space_text.style.display = "none";
-        container_right.addEventListener("mousemove", (e) => {
-            coordinates(e);
-        });
-    }
+        if (x > prevX)
+        {
+            prevX = x;
+            test.style.rotate = "90deg";
+        }
+        else if (x < prevX)
+        {
+            prevX = x;
+            test.style.rotate = "270deg";
+        }
+        else if (y > prevY)
+        {
+            prevY = y;
+            test.style.rotate = "180deg"
+        }
+        else if (y < prevY)
+        {
+            prevY = y;
+            test.style.rotate = "0deg";
+        }
+    }*/
 
-    function shuttle_stop()
-    {
-        shuttle_container.classList.remove("extend_container");
-        shuttle_space_text.style.display = "block";
-        container_right.removeEventListener("mousemove", (e) => { //bug
-            coordinates(e);
-        });
-    }
-
-    function coordinates(e)
-    {
-        left = e.offsetX.toString() + "px";
-        top = e.offsetY.toString() + "px";
-        shuttle_space.style.left = left;
-        shuttle_space.style.top = top;
-    }
+    /*document.addEventListener("mouseup", () => {
+        if (isMoving2)
+        {
+            isMoving2 = false;
+        }
+    });*/
 
     // COUNTER //
     const score = document.querySelector(".right .stats .score span");
