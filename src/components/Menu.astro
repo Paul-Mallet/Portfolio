@@ -2,15 +2,13 @@
 const menu = ["home", "about", "projects", "contact"];
 ---
 
-<main>
-    <nav>
-        <ul>
-            {menu.map((link) =>
-                <li><a href={"/" + (link === "home" ? "" : link)}>{link}</a></li>
-            )}
-        </ul>
-    </nav>
-</main>
+<nav>
+    <ul>
+        {menu.map((link) =>
+            <li><a href={"/" + (link === "home" ? "" : link)}>{link}</a></li>
+        )}
+    </ul>
+</nav>
 
 <style>
     ul
