@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Frame from "../components/Frame.astro";
-import { fade } from "astro:transitions";
 const pageTitle = "Projects";
 const width = "72vw";
 const height = "72vh";
@@ -10,141 +9,132 @@ const frame_tr = "frame_tr";
 
 <BaseLayout pageTitle={pageTitle}>
     <Frame width={width} height={height} frame_tr={frame_tr}>
-        <main>
-            <section class="little_js">
-                <div class="left">
-                    <h2>Little Javascript<span style="color: #de4900;">.</span></h2>
-                    <div class="data">
-                        <div class="tech_stack">
-                            <strong>Tech_Stack:</strong>
-                            <ul>
-                                <li>HTML5<span class="html"></span></li>
-                                <li>CSS3<span class="css"></span></li>
-                                <li>Javascript ES6+<span class="js"></span></li>
-                            </ul>
+        <section class="little_js">
+            <div class="left">
+                <h1>Little Javascript<span style="color: #de4900;">.</span></h1>
+                <div class="data">
+                    <div class="tech_stack">
+                        <strong>Tech_Stack:</strong>
+                        <ul>
+                            <li>HTML5<span class="html"></span></li>
+                            <li>CSS3<span class="css"></span></li>
+                            <li>Javascript ES6+<span class="js"></span></li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <strong>Description:</strong>
+                        <p>A package of 15 small JS projects to create dynamic websites and webapps. This approach allow users to interact with pages and custom them. It brings a better user experience and can update the data in real time. These projects include random backgrounds, modals, burger menu, filters and many more...</p>
+                    </div>
+                    <div class="links">
+                        <strong>Links:</strong>
+                        <div class="all">
+                            <a href="">www.little-javascript.app</a>
+                            <a href="">Github Repository</a>
                         </div>
-                        <div class="description">
-                            <strong>Description:</strong>
-                            <p>A package of 15 small JS projects to create dynamic websites and webapps. This approach allow users to interact with pages and custom them. It brings a better user experience and can update the data in real time. These projects include random backgrounds, modals, burger menu, filters and many more...</p>
-                        </div>
-                        <div class="links">
-                            <strong>Links:</strong>
-                            <div class="all">
-                                <a href="">www.little-javascript.app</a>
-                                <a href="">Github Repository</a>
-                            </div>
-                        </div>
-                        <div class="created_at">
-                            <strong>Created_at:</strong>
-                            <p>07/2023 - 08/2023</p>
-                        </div>
-                        <div class="progress">
-                            <strong>Progression:</strong>
-                            <div class="progress_bar"></div>
-                            <p>100%</p>
-                        </div>
+                    </div>
+                    <div class="created_at">
+                        <strong>Created_at:</strong>
+                        <p>07/2023 - 08/2023</p>
+                    </div>
+                    <div class="progress">
+                        <strong>Progression:</strong>
+                        <div class="progress_bar"></div>
+                        <p>100%</p>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512">
-                            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" style="margin-left: .4vw;" viewBox="0 0 384 512">
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-                        </svg>
-                    </div>
-                    <svg class="random_bg" viewBox="0 0 806 505" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="random_grad" x1="50%" y1="0%" x2="50%" y2="100%">
-                                <stop class="stop1" offset="0%" stop-color="#7A5FFF">
-                                    <animate
-                                    attributeName="stop-color"
-                                    values="#7A5FFF; #01FF89; #7A5FFF"
-                                    dur="8s"
-                                    repeatCount="indefinite"
-                                    />
-                                </stop>
-                                <stop class="stop2" offset="100%" stop-color="#01FF89">
-                                    <animate
-                                    attributeName="stop-color"
-                                    values="#01FF89; #7A5FFF; #01FF89"
-                                    dur="8s"
-                                    repeatCount="indefinite"
-                                    />
-                                </stop>
-                            </linearGradient>
-                        </defs>
-                        <path d="M772 80.5C684 -25.1 549.5 104.503 437 60C286.167 0.33334 27.9999 -72.2 3.99993 159C-20.0001 390.2 103.5 376.5 164.5 331C217.833 285.833 345.9 237.3 431.5 404.5C538.5 613.5 824.5 446.5 752 331C679.5 215.5 882 212.5 772 80.5Z" fill="url(#random_grad)"/>
+            </div>
+            <div class="right">
+                <div class="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                     </svg>
-                    <svg class="target" width="28" height="28" viewBox="0 0 465 478" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="234" cy="246" r="149" stroke="#E44D26" stroke-width="40"/>
-                        <line x1="237" x2="237" y2="162" stroke="#E44D26" stroke-width="40"/>
-                        <line x1="237" y1="316" x2="237" y2="478" stroke="#E44D26" stroke-width="40"/>
-                        <line y1="243" x2="162" y2="243" stroke="#E44D26" stroke-width="40"/>
-                        <line x1="303" y1="243" x2="465" y2="243" stroke="#E44D26" stroke-width="40"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" style="margin-left: .4vw;" viewBox="0 0 384 512">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                     </svg>
-                    <span class="html orbit"></span>
-                    <span class="css orbit"></span>
-                    <span class="js orbit"></span>
-                    <div class="faq">
-                        <div class="top">
-                            <p>Did you see something ?</p>
-                            <div class="btns">
-                                <svg class="plus not_display" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
-                                    <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
-                                </svg>
-                                <svg class="minus" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
-                                    <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM152 232H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                        <p class="content">Lorem ipsum dolor sit amet, consecta adipiscing elitm sed do eiusmod tempor incididunt ut labore et dolo.</p>
-                    </div>
-                    <div class="shuttle_container">
-                        <div class="shuttle_space">
-                            <p>Hold</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512">
-                                <path d="M130 480c40.6 0 80.4-11 115.2-31.9L352 384l-224 0 0 96h2zM352 128L245.2 63.9C210.4 43 170.6 32 130 32h-2v96l224 0zM96 128l0-96H80C53.5 32 32 53.5 32 80v48h8c-22.1 0-40 17.9-40 40v16V328v16c0 22.1 17.9 40 40 40H32v48c0 26.5 21.5 48 48 48H96l0-96h8c26.2 0 49.4-12.6 64-32H456c69.3 0 135-22.7 179.2-81.6c6.4-8.5 6.4-20.3 0-28.8C591 182.7 525.3 160 456 160H168c-14.6-19.4-37.8-32-64-32l-8 0zM512 243.6v24.9c0 19.6-15.9 35.6-35.6 35.6c-2.5 0-4.4-2-4.4-4.4V212.4c0-2.5 2-4.4 4.4-4.4c19.6 0 35.6 15.9 35.6 35.6z"/>
+                </div>
+                <svg class="random_bg" viewBox="0 0 806 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="random_grad" x1="50%" y1="0%" x2="50%" y2="100%">
+                            <stop class="stop1" offset="0%" stop-color="#7A5FFF">
+                                <animate
+                                attributeName="stop-color"
+                                values="#7A5FFF; #01FF89; #7A5FFF"
+                                dur="8s"
+                                repeatCount="indefinite"
+                                />
+                            </stop>
+                            <stop class="stop2" offset="100%" stop-color="#01FF89">
+                                <animate
+                                attributeName="stop-color"
+                                values="#01FF89; #7A5FFF; #01FF89"
+                                dur="8s"
+                                repeatCount="indefinite"
+                                />
+                            </stop>
+                        </linearGradient>
+                    </defs>
+                    <path d="M772 80.5C684 -25.1 549.5 104.503 437 60C286.167 0.33334 27.9999 -72.2 3.99993 159C-20.0001 390.2 103.5 376.5 164.5 331C217.833 285.833 345.9 237.3 431.5 404.5C538.5 613.5 824.5 446.5 752 331C679.5 215.5 882 212.5 772 80.5Z" fill="url(#random_grad)"/>
+                </svg>
+                <svg class="target" width="28" height="28" viewBox="0 0 465 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="234" cy="246" r="149" stroke="#E44D26" stroke-width="40"/>
+                    <line x1="237" x2="237" y2="162" stroke="#E44D26" stroke-width="40"/>
+                    <line x1="237" y1="316" x2="237" y2="478" stroke="#E44D26" stroke-width="40"/>
+                    <line y1="243" x2="162" y2="243" stroke="#E44D26" stroke-width="40"/>
+                    <line x1="303" y1="243" x2="465" y2="243" stroke="#E44D26" stroke-width="40"/>
+                </svg>
+                <span class="html orbit"></span>
+                <span class="css orbit"></span>
+                <span class="js orbit"></span>
+                <div class="faq">
+                    <div class="top">
+                        <p>Did you see something ?</p>
+                        <div class="btns">
+                            <svg class="plus not_display" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
+                                <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
+                            </svg>
+                            <svg class="minus" xmlns="http://www.w3.org/2000/svg" height="1.24em" viewBox="0 0 448 512">
+                                <path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM152 232H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
                             </svg>
                         </div>
                     </div>
-                    <div class="stats">
-                        <p class="score">Score: <span>0</span></p>
-                        <p class="timeout">00:<span>10</span></p>
+                    <div class="separator"></div>
+                    <p class="content">Lorem ipsum dolor sit amet, consecta adipiscing elitm sed do eiusmod tempor incididunt ut labore et dolo.</p>
+                </div>
+                <div class="shuttle_container">
+                    <div class="shuttle_space">
+                        <p>Hold</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512">
+                            <path d="M130 480c40.6 0 80.4-11 115.2-31.9L352 384l-224 0 0 96h2zM352 128L245.2 63.9C210.4 43 170.6 32 130 32h-2v96l224 0zM96 128l0-96H80C53.5 32 32 53.5 32 80v48h8c-22.1 0-40 17.9-40 40v16V328v16c0 22.1 17.9 40 40 40H32v48c0 26.5 21.5 48 48 48H96l0-96h8c26.2 0 49.4-12.6 64-32H456c69.3 0 135-22.7 179.2-81.6c6.4-8.5 6.4-20.3 0-28.8C591 182.7 525.3 160 456 160H168c-14.6-19.4-37.8-32-64-32l-8 0zM512 243.6v24.9c0 19.6-15.9 35.6-35.6 35.6c-2.5 0-4.4-2-4.4-4.4V212.4c0-2.5 2-4.4 4.4-4.4c19.6 0 35.6 15.9 35.6 35.6z"/>
+                        </svg>
                     </div>
                 </div>
-            </section>
-        </main>
+                <div class="stats">
+                    <p class="score">Score: <span>0</span></p>
+                    <p class="timeout">00:<span>10</span></p>
+                </div>
+            </div>
+        </section>
     </Frame>
 </BaseLayout>
 
 <style>
-    main
-    {
-        width: 72vw;
-        height: 72vh;
-        padding: 32px;
-    }
-
     section
     {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
+        width: 72vw;
+        height: 72vh;
+        padding: 32px;
     }
 
-    h2
+    h1
     {
         display: flex;
-        font-size: calc(1rem + 1vw);
         margin-bottom: 3.2vh;
     }
 
-    h2 span
+    h1 span
     {
         margin: 0;
     }
@@ -331,7 +321,7 @@ const frame_tr = "frame_tr";
         animation: aroundhtml 4s ease-in-out 0s infinite normal none;
     }
 
-    @keyframes aroundhtml
+    @keyframes roundhtml
     {
         0%
         {
@@ -366,7 +356,7 @@ const frame_tr = "frame_tr";
         animation: aroundcss 4s ease-in-out 0s infinite normal none;
     }
 
-    @keyframes aroundcss
+    @keyframes roundcss
     {
         0%
         {
@@ -401,7 +391,7 @@ const frame_tr = "frame_tr";
         animation: aroundjs 4s ease-in-out 0s infinite normal none;
     }
 
-    @keyframes aroundjs
+    @keyframes roundjs
     {
         0%
         {
@@ -489,35 +479,31 @@ const frame_tr = "frame_tr";
         position: absolute;
         display: flex;
         flex-direction: column;
-        bottom: 14vh;
-        left: 2vw;
-        z-index: 11;
-    }
-
-    .extend_container
-    {
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        bottom: 0 !important;
-        left: 0 !important;
     }
 
-    .right .shuttle_container .shuttle_space
+    .right .shuttle_space
     {
         position: absolute;
         display: flex;
         align-items: center;
         flex-direction: column;
+        left: 8%;
+        top: 74%;
     }
 
-    .right .shuttle_container .shuttle_space svg
+    .right .shuttle_space svg
     {
-        rotate: -45deg;
         cursor: pointer;
     }
 
-    .right .shuttle_container .shuttle_space p
+    .right .shuttle_space p
     {
+        position: absolute;
+        top: -24px;
         margin-bottom: 4px;
         font-size: calc(.24em + .8vw);
         font-weight: 600;
