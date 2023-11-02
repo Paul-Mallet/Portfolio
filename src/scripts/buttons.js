@@ -1,8 +1,40 @@
 document.addEventListener("astro:page-load", () => {
-    // SIGNATURE //
-
-    const signatureDiv = document.querySelector(".left .hand_signature");
     const href = window.location.href;
+
+    // HANDWRITING //
+    if (href === "http://localhost:4321/")
+    {
+        const dlModeContainer = document.querySelector(".container-dl-mode");
+        const dlMode = document.querySelector(".dl-mode");
+
+        dlModeContainer.addEventListener("mouseover", () => {
+            dlMode.classList.remove("disp");
+        });
+
+        const signatureContainer = document.querySelector(".container-signature");
+        const signature = document.querySelector(".signature");
+
+        signatureContainer.addEventListener("mouseover", () => {
+            signature.classList.remove("disp");
+        });
+
+        const soundContainer = document.querySelector(".container-sound");
+        const sound = document.querySelector(".sound");
+
+        soundContainer.addEventListener("mouseover", () => {
+            sound.classList.remove("disp");
+        });
+
+        const socialsContainer = document.querySelector(".container-socials");
+        const socials = document.querySelector(".socials");
+
+        socialsContainer.addEventListener("mouseover", () => {
+            socials.classList.remove("disp");
+        });
+    }
+
+    // SIGNATURE //
+    const signatureDiv = document.querySelector(".left .hand_signature");
 
     function getUrl()
     {
@@ -18,11 +50,8 @@ document.addEventListener("astro:page-load", () => {
         }
     }
     getUrl();
-});
 
-document.addEventListener("astro:page-load", () => {
     // SOUND //
-
     const audio = new Audio("sounds/background.mp3");
     const sound_btn = document.querySelector(".right .hand_sound button");
     sound_btn.addEventListener("click", toggle);
