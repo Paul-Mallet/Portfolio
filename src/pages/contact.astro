@@ -12,30 +12,42 @@ const frame_tr = "frame_tr";
         <div class="container">
             <div class="left">
                 <h1>Contact<span style="color: #de4900;">.</span></h1>
-                <form class="form" method="post">
+                <form class="form" method="post" novalidate>
                     <div class="name_job">
                         <p class="name_left">
                             <label for="name">Your Name</label>
+                            <span class="error" aria-live="polite"></span>
                             <input type="text" id="name" name="user_name" maxlength="56" placeholder="ex: Paul Mallet" required></input>
                         </p>
                         <p class="job_right">
                             <label for="job">Your Job</label>
+                            <span class="error" aria-live="polite"></span>
                             <input type="text" id="job" name="user_job" maxlength="56" placeholder="ex: Software Engineer" required></input>
                         </p>
                     </div>
                     <div class="others">
                         <p class="email">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" name="user_email" maxlength="56" placeholder="ex: email@gmail.com" required></input>
+                            <span class="error" aria-live="polite"></span>
+                            <input type="email" id="email" name="user_email" minlength="8" maxlength="56" placeholder="ex: email@gmail.com" required></input>
                         </p>
                         <p class="message">
                             <label for="message">Your Message</label>
+                            <span class="error" aria-live="polite"></span>
                             <textarea rows="3" id="message" name="user_message" maxlength="240" placeholder="Type your request here..." required></textarea>
                         </p>
                         <div class="captcha">
 
                         </div>
-                        <button type="submit">Send Message</button>
+                        <div class="submit_btn">
+                            <button type="submit">Send Message</button>
+                            <svg class="error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
+                            </svg>
+                            <svg class="valid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/>
+                            </svg>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -123,6 +135,24 @@ const frame_tr = "frame_tr";
         height: 16px;
     }
 
+    .error
+    {
+        color: #e44d26;
+        fill: #e44d26;
+    }
+
+    .valid
+    {
+        display: none;
+        color: #3EB489;
+        fill: #3EB489;
+    }
+
+    .complete
+    {
+        display: block;
+    }
+
     .left h1
     {
         margin-bottom: 12px;
@@ -137,7 +167,7 @@ const frame_tr = "frame_tr";
 
     .left .form label
     {
-        font-size: 1rem;
+        font-size: calc(.72rem + .36vw);
     }
 
     .left .form .name_job,
@@ -156,7 +186,20 @@ const frame_tr = "frame_tr";
     .left .form .name_job .name_left,
     .left .form .name_job .job_right
     {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
         width: 47.5%;
+    }
+
+    .form .others .email,
+    .form .others .message
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .left .form .name_job .name_left input,
@@ -189,7 +232,14 @@ const frame_tr = "frame_tr";
         vertical-align: top;
     }
 
-    .left .form .others button
+    .left .form .others .submit_btn
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left .form .others .submit_btn button
     {
         font-size: 1rem;
         color: #ecf0f3;
@@ -198,6 +248,11 @@ const frame_tr = "frame_tr";
         border: none;
         border-radius: 32px;
         cursor: pointer;
+    }
+
+    .left .form .others .submit_btn svg
+    {
+        width: 42px;
     }
 
     .right .send_anim
@@ -259,3 +314,5 @@ const frame_tr = "frame_tr";
         opacity: .4;
     }
 </style>
+
+<script src="../scripts/form.js"/>
