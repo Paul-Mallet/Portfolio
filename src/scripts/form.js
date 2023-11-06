@@ -13,6 +13,8 @@ document.addEventListener("astro:page-load", () => {
         const errJob = document.querySelector(".job_right span");
         const errEmail = document.querySelector(".others .email span");
         const errMessage = document.querySelector(".others .message span");
+        const validCheck = document.querySelector(".others .submit_btn .valid");
+        const errorCheck = document.querySelector(".others .submit_btn .error");
 
         const tabInput = [name, job, email, message];
         const tabErr = [errName, errJob, errEmail, errMessage];
@@ -67,6 +69,18 @@ document.addEventListener("astro:page-load", () => {
                     tabErr[2].className = "error";
                 }
                 j++;
+            }
+            if (name.validity.valid && job.validity.valid
+            && email.validity.valid && message.validity.valid)
+            {
+                //GSAP anim
+                errorCheck.classList.add("incomplete");
+                validCheck.classList.remove("incomplete");
+            }
+            else
+            {
+                validCheck.classList.add("incomplete");
+                errorCheck.classList.remove("incomplete");
             }
             e.preventDefault();
         });
