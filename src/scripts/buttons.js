@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
@@ -50,6 +52,41 @@ document.addEventListener("astro:page-load", () => {
         }
     }
     getUrl();
+
+    // GSAP //
+    const containerSign = document.querySelector(".left .hand_signature .signature");
+    const str = "Paul . Mallet";
+    const words = str.split(" ");
+    let i = 0;
+
+    while (i < words.length)
+    {
+        const div = document.createElement("div");
+        div.setAttribute("style", "position:relative;display:inline-block;");
+        let j = 0;
+        while (j < words[i].length)
+        {
+            const inDiv = document.createElement("div");
+            inDiv.setAttribute("style", "position:relative;display:inline-block;");
+            inDiv.textContent = words[i][j];
+            if (words[i][j] === ".")
+            {
+                inDiv.style.color = "#de4900";
+            }
+            div.append(inDiv);
+            j++;
+        }
+        containerSign.append(div);
+        i++;
+    }
+
+    const divsSign = document.querySelectorAll(".left .hand_signature .signature div div");
+    const divsBack = document.querySelectorAll(".left .hand_signature a .back div div");
+    const divIcon = document.querySelector(".left .hand_signature a .icon");
+
+    gsap.from(divsSign, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
+    gsap.from(divsBack, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
+    gsap.from(divIcon, { delay: 0.24, duration: 0.48, opacity: 0, scale: 0, x: 40, transformOrigin: "0% 50%", ease: "back.out" });
 
     // SOUND //
     const audio = new Audio("sounds/background.mp3");
