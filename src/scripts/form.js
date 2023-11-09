@@ -1,3 +1,5 @@
+import { gsap } from "gsap/gsap-core";
+
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
@@ -73,9 +75,10 @@ document.addEventListener("astro:page-load", () => {
             if (name.validity.valid && job.validity.valid
             && email.validity.valid && message.validity.valid)
             {
-                //GSAP anim
                 errorCheck.classList.add("incomplete");
                 validCheck.classList.remove("incomplete");
+                // GSAP //
+                
             }
             else
             {
