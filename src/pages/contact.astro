@@ -34,7 +34,7 @@ const frame_tr = "frame_tr";
                         <p class="message">
                             <label for="message">Your Message</label>
                             <span class="error" aria-live="polite"></span>
-                            <textarea rows="3" id="message" name="user_message" maxlength="240" placeholder="Type your request here..." required></textarea>
+                            <textarea id="message" name="user_message" maxlength="320" placeholder="Type your request here..." spellcheck="false" required></textarea>
                         </p>
                         <div class="captcha">
 
@@ -54,7 +54,7 @@ const frame_tr = "frame_tr";
             <div class="right">
                 <div class="send_anim">
                     <svg class="plane-line" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="40 40"/>
+                        <path id="path" d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="40 40"/>
                     </svg>
                     <svg class="paper_plane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/>
@@ -207,6 +207,7 @@ const frame_tr = "frame_tr";
     .left .form .others .message textarea
     {
         font-family: 'Roboto Mono', monospace;
+        font-size: calc(.64rem + .36vw);
         background: #d6dee9;
         width: 100%;
         margin-top: 4px;
@@ -226,6 +227,7 @@ const frame_tr = "frame_tr";
 
     .left .form .others .message textarea
     {
+        height: calc(60vh - 360px);
         resize: none;
         overflow: auto;
         vertical-align: top;
@@ -272,7 +274,7 @@ const frame_tr = "frame_tr";
     .right .send_anim .paper_plane
     {
         position: absolute;
-        width: 64px;
+        width: 48px;
     }
 
     .right .send_anim .cloud
@@ -288,8 +290,8 @@ const frame_tr = "frame_tr";
 
     .right .send_anim .cloud.bot
     {
-        bottom: 6vh;
-        right: 6vw;
+        bottom: 5vh;
+        right: 4vw;
     }
 
     .right .my_address
