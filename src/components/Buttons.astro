@@ -15,10 +15,19 @@
             <div class="signature none" style="width:74px; height: 50px;">
             </div>
             <a href="http://localhost:4321/" class="none">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1.1em" style="opacity: .4;" viewBox="0 0 448 512">
-                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                </svg>
-                <p>Back</p>
+                <div class="icon" style="position:relative;display:inline-block;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.1em" style="opacity: .4;" viewBox="0 0 448 512">
+                        <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                    </svg>
+                </div>
+                <div class="back">
+                    <div style="position:relative;display:inline-block;">
+                        <div style="position:relative;display:inline-block;">B</div>
+                        <div style="position:relative;display:inline-block;">a</div>
+                        <div style="position:relative;display:inline-block;">c</div>
+                        <div style="position:relative;display:inline-block;">k</div>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
@@ -143,11 +152,6 @@
         font-weight: 600;
     }
 
-    .hand_signature div .a
-    {
-
-    }
-
     .hand_signature a
     {
         display: flex;
@@ -158,24 +162,14 @@
         margin-bottom: -4%;
     }
 
-    .hand_signature a p
-    {
-        margin-left: 8px;
-        opacity: .4;
-    }
-
     .back
     {
         display: flex;
         align-items: center;
         font-size: 1.28rem;
         font-weight: 600;
-        margin-bottom: -4%;
-    }
-
-    .back p
-    {
         margin-left: 8px;
+        margin-bottom: 4%;
         opacity: .4;
     }
 
@@ -212,4 +206,3 @@
 </style>
 
 <script src="../scripts/buttons.js" />
-<script src="../scripts/gsap/signature.js" />
