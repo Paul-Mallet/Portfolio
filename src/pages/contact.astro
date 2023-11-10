@@ -53,16 +53,19 @@ const frame_tr = "frame_tr";
             </div>
             <div class="right">
                 <div class="send_anim">
-                    <svg class="plane-line" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
-                        <path id="path" d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="40 40"/>
+                    <svg class="plane-line" style="z-index: 1;" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#ecf0f3" stroke-width="30" stroke-dasharray="40 40" />
+                        <g id="plane">
+                            <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
+                        </g>
                     </svg>
-                    <svg class="paper_plane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/>
+                    <svg class="plane-line" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path" class="" d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" />
                     </svg>
-                    <svg class="cloud top" height="64" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="cloud top" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 336C0 415.5 64.5 480 144 480H512C582.7 480 640 422.7 640 352C640 290.1 596 238.4 537.6 226.6C541.7 215.9 544 204.2 544 192C544 139 501 96 448 96C428.3 96 409.9 102 394.7 112.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192C96 194.7 96.1 197.4 96.2 200.1C40.2 219.8 0 273.2 0 336Z"/>
                     </svg>
-                    <svg class="cloud bot" height="90" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="cloud bot" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 336C0 415.5 64.5 480 144 480H512C582.7 480 640 422.7 640 352C640 290.1 596 238.4 537.6 226.6C541.7 215.9 544 204.2 544 192C544 139 501 96 448 96C428.3 96 409.9 102 394.7 112.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192C96 194.7 96.1 197.4 96.2 200.1C40.2 219.8 0 273.2 0 336Z"/>
                     </svg>
                 </div>
@@ -114,7 +117,7 @@ const frame_tr = "frame_tr";
     {
         width: 50%;
         background: #ecf0f3;
-        z-index: 1;
+        z-index: 2;
     }
 
     .right
@@ -123,6 +126,11 @@ const frame_tr = "frame_tr";
         flex-direction: column;
         align-items: center;
         width: 50%;
+    }
+
+    p
+    {
+        font-size: calc(.60rem + .36vw);
     }
 
     svg
@@ -260,38 +268,62 @@ const frame_tr = "frame_tr";
     {
         position: relative;
         width: 100%;
-        height: 36vh;
+        height: 38vh;
     }
 
     .right .send_anim .plane-line
     {
         position: absolute;
-        height: calc(10vw + 12px);
-        top: calc(4vw);
-        left: calc(-1.6vw - 24px);
+        height: calc(10vw + 40px);
+        top: calc(1.6vw + 36px);
+        left: calc(-2vw - 48px);
+        overflow: visible;
     }
 
-    .right .send_anim .paper_plane
+    .right .send_anim .plane-line #path
     {
-        position: absolute;
-        width: 48px;
+        stroke-dasharray: 4308;
+        stroke-dashoffset: 4308;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .anim_path
+    {
+        animation: power1 2.4s cubic-bezier(.57, 0, 1, 1) forwards;
+    }
+
+    @keyframes power1
+    {
+        to
+        {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .right .send_anim .plane-line #plane
+    {
+        transform: scale(.4) translateX(-80vw);
     }
 
     .right .send_anim .cloud
     {
         position: absolute;
+        z-index: 3;
     }
 
     .right .send_anim .cloud.top
     {
         top: 1.6vh;
         left: 3.6vw;
+        width: calc( 24px + 3.2vw);
     }
 
     .right .send_anim .cloud.bot
     {
-        bottom: 5vh;
-        right: 4vw;
+        bottom: 4vh;
+        right: 3vw;
+        width: calc(36px + 3.6vw)
     }
 
     .right .my_address
