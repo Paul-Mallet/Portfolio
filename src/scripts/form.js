@@ -1,4 +1,7 @@
-import { gsap } from "gsap/gsap-core";
+import { gsap } from "gsap";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(MotionPathPlugin);
 
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
@@ -20,7 +23,6 @@ document.addEventListener("astro:page-load", () => {
 
         const tabInput = [name, job, email, message];
         const tabErr = [errName, errJob, errEmail, errMessage];
-        let i = 0;
 
         name.addEventListener("input", () => {
             if (name.validity.valid)
@@ -52,13 +54,13 @@ document.addEventListener("astro:page-load", () => {
         }, false);
 
         form.addEventListener("submit", (e) => {
-            let j = 0;
-            while (j < tabInput.length)
+            let i = 0;
+            while (i < tabInput.length)
             {
-                if (tabInput[j].validity.valueMissing)
+                if (tabInput[i].validity.valueMissing)
                 {
-                    tabErr[j].innerText = "Required";
-                    tabErr[j].className = "error";
+                    tabErr[i].innerText = "Required";
+                    tabErr[i].className = "error";
                 }
                 else if (tabInput[2].validity.typeMismatch)
                 {
@@ -70,7 +72,7 @@ document.addEventListener("astro:page-load", () => {
                     tabErr[2].innerText = "Too short email";
                     tabErr[2].className = "error";
                 }
-                j++;
+                i++;
             }
             if (name.validity.valid && job.validity.valid
             && email.validity.valid && message.validity.valid)
@@ -78,7 +80,21 @@ document.addEventListener("astro:page-load", () => {
                 errorCheck.classList.add("incomplete");
                 validCheck.classList.remove("incomplete");
                 // GSAP //
-                
+                const plane = document.querySelector(".right .send_anim .plane-line #plane");
+                const path = document.querySelector(".right .send_anim .plane-line #path");
+
+                gsap.to(plane, {
+                    duration: 2.4,
+                    ease: "power1.in",
+                    motionPath: {
+                        path: path,
+                        align: path,
+                        autoRotate: true,
+                        alignOrigin: [0.5, 0.5],
+                    }
+                });
+
+                path.classList.add("anim_path");
             }
             else
             {
@@ -88,4 +104,4 @@ document.addEventListener("astro:page-load", () => {
             e.preventDefault();
         });
     }
-});
+})
