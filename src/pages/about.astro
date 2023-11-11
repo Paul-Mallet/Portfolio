@@ -12,16 +12,23 @@ const frame_tr = "frame_tr";
         <div class="container">
             <h1>About Me<span style="color: #de4900;">.</span></h1>
             <div class="roadmap">
-                <svg class="about_line" width="70vw" viewBox="0 0 2461 1214" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="path" d="M6.5 87.5C161.833 193.833 490.9 357.2 964.5 268C1556.5 156.5 1641.5 -93.5 1956.5 56.9999C2321.69 231.477 2226.5 706.5 1641.5 722C1056.5 737.5 564.607 403.692 114.5 756.5C-170 979.5 145.5 1325.5 764.5 1122C1259.7 959.2 1999 1483.5 2453 976" stroke="black" stroke-width="20" stroke-dasharray="80 80"/>
+                <svg class="about_line" width="72vw" style="z-index: 1;" viewBox="0 0 2570 964" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#ecf0f3" stroke-width="30" stroke-dasharray="80 80"/>
                     <g id="pop">
-                        <circle></circle>
+                        <circle class="a" cx="63" cy="97" r="63"/>
+                        <circle class="b waiting" cx="1094" cy="248" r="63"/>
+                        <circle class="c waiting" cx="2004" cy="63" r="63"/>
+                        <circle class="d waiting" cx="1726" cy="582" r="63"/>
+                        <circle class="e waiting" cx="617" cy="462" r="63"/>
+                        <circle class="f waiting" cx="576" cy="892" r="63"/>
+                        <circle class="g waiting" cx="1675" cy="890" r="63"/>
+                        <circle class="h waiting" cx="2442" cy="756" r="63"/>
                     </g>
                 </svg>
-                <svg class="about_line" width="70vw" viewBox="0 0 2461 1214" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="path" d="M6.5 87.5C161.833 193.833 490.9 357.2 964.5 268C1556.5 156.5 1641.5 -93.5 1956.5 56.9999C2321.69 231.477 2226.5 706.5 1641.5 722C1056.5 737.5 564.607 403.692 114.5 756.5C-170 979.5 145.5 1325.5 764.5 1122C1259.7 959.2 1999 1483.5 2453 976" stroke="black" stroke-width="20" stroke-dasharray="80 80"/>
+                <svg class="about_line" width="72vw" viewBox="0 0 2570 929" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="path" class="" d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="80 80"/>
                 </svg>
-                <div class="box">
+                <div class="box a">
                     <div class="top">
                         <h2 style="text-decoration: underline;">HTML5</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
@@ -42,10 +49,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button style="visibility: hidden;"></button>
-                        <button>Next</button>
+                        <button class="btn_nxt1">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box b waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">CSS3</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
@@ -64,10 +71,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt2">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box c waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">Javascript</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
@@ -87,10 +94,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt3">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box d waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">Digital Marketing</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M3.9 22.9C10.5 8.9 24.5 0 40 0H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L396.4 195.6C316.2 212.1 256 283 256 368c0 27.4 6.3 53.4 17.5 76.5c-1.6-.8-3.2-1.8-4.7-2.9l-64-48c-8.1-6-12.8-15.5-12.8-25.6V288.9L9 65.3C-.7 53.4-2.8 36.8 3.9 22.9zM288 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm120.8-32.6c.6-.9 1.8-2.1 4.2-3.4c5.1-2.7 12.5-4.1 18.7-4c8.2 .1 17.1 1.8 26.4 4.1c8.6 2.1 17.3-3.1 19.4-11.7s-3.1-17.3-11.7-19.4c-5.6-1.4-11.6-2.7-17.9-3.7V288c0-8.8-7.2-16-16-16s-16 7.2-16 16v9.5c-6.1 1.2-12.3 3.2-18 6.3c-11.8 6.3-23 18.4-21.8 37.2c1 16 11.7 25.3 21.6 30.7c8.8 4.7 19.7 7.8 28.6 10.3l1.8 .5c10.3 2.9 17.9 5.2 23.2 8.3c4.5 2.7 4.7 4.2 4.7 5.6c.1 2.4-.5 3.7-1 4.5c-.6 1-1.8 2.2-4 3.3c-4.7 2.5-11.8 3.8-18.5 3.6c-9.5-.3-18.5-3.1-29.9-6.8c-1.9-.6-3.8-1.2-5.8-1.8c-8.4-2.6-17.4 2.1-20 10.5s2.1 17.4 10.5 20c1.6 .5 3.3 1 5 1.6l0 0 0 0c7 2.3 15.1 4.8 23.7 6.6v11.4c0 8.8 7.2 16 16 16s16-7.2 16-16V438.7c6.2-1.1 12.5-3.1 18.3-6.2c12.1-6.5 22.3-18.7 21.7-36.9c-.5-16.2-10.3-26.3-20.5-32.3c-9.4-5.6-21.2-8.9-30.5-11.5l-.2 0c-10.4-2.9-18.3-5.2-23.9-8.2c-4.8-2.6-4.8-4-4.8-4.5l0-.1c-.1-1.9 .3-2.9 .8-3.6z"/></svg>
@@ -109,10 +116,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt4">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box e waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">Data Analytics</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/></svg>
@@ -126,16 +133,16 @@ const frame_tr = "frame_tr";
                         with stakeholders and act thanks
                         to insights discovered. I’ve used
                         SQL queries to filter and sort
-                        datasets and R language to create
+                        datasets, R language to create
                         visualisations and Tableau a
                         visual analytic platform.
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt5">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box f waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">Javascript's back</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
@@ -155,10 +162,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt6">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box g waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">C Language & Shell</h2>
                         <svg viewBox="32.18585611720149 20.47 223.6851360941233 247.05999999999997" xmlns="http://www.w3.org/2000/svg">
@@ -183,10 +190,10 @@ const frame_tr = "frame_tr";
                     </p>
                     <div class="bot">
                         <button>Prev</button>
-                        <button>Next</button>
+                        <button class="btn_nxt7">Next</button>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box h waiting">
                     <div class="top">
                         <h2 style="text-decoration: underline;">What's next ?</h2>
                         <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 512 512">
@@ -231,12 +238,154 @@ const frame_tr = "frame_tr";
     {
         position: absolute;
         height: auto;
+        overflow: visible;
     }
 
     .about_line path
     {
         fill: none;
     }
+
+    .about_line #path
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+    }
+
+    .anim1
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim1 1s linear forwards;
+    }
+
+    @keyframes anim1
+    {
+        to
+        {
+            stroke-dashoffset: 6242;
+        }
+    }
+
+    .anim2
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim2 1s linear forwards;
+    }
+
+    @keyframes anim2
+    {
+        from
+        {
+            stroke-dashoffset: 6242;
+        }
+        to
+        {
+            stroke-dashoffset: 5382;
+        }
+    }
+
+    .anim3
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim3 1s linear forwards;
+    }
+
+    @keyframes anim3
+    {
+        from
+        {
+            stroke-dashoffset: 5382;
+        }
+        to
+        {
+            stroke-dashoffset: 4362;
+        }
+    }
+
+    .anim4
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim4 1s linear forwards;
+    }
+
+    @keyframes anim4
+    {
+        from
+        {
+            stroke-dashoffset: 4362;
+        }
+        to
+        {
+            stroke-dashoffset: 3240;
+        }
+    }
+
+    .anim5
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim5 1s linear forwards;
+    }
+
+    @keyframes anim5
+    {
+        from
+        {
+            stroke-dashoffset: 3240;
+        }
+        to
+        {
+            stroke-dashoffset: 1940;
+        }
+    }
+
+    .anim6
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim6 1s linear forwards;
+    }
+
+    @keyframes anim6
+    {
+        from
+        {
+            stroke-dashoffset: 1940;
+        }
+        to
+        {
+            stroke-dashoffset: 900;
+        }
+    }
+
+    .anim7
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim7 1s linear forwards;
+    }
+
+    @keyframes anim7
+    {
+        from
+        {
+            stroke-dashoffset: 1000;
+        }
+        to
+        {
+            stroke-dashoffset: 60;
+        }
+    }
+
+    #pop circle
+    {
+        fill: #de4900;
+    }
+
 
     .box
     {
@@ -246,6 +395,13 @@ const frame_tr = "frame_tr";
         color: #7c8086;
         background: #d6dee9;
         border-radius: 24px;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .waiting
+    {
+        display: none;
     }
 
     .top
@@ -288,4 +444,13 @@ const frame_tr = "frame_tr";
         border: none;
         border-radius: 32px;
     }
+
+    .a
+    {
+        top: calc(100px + 9vh);
+        left: calc(-36px + 3.32vw);
+        opacity: 1;
+    }
 </style>
+
+<script src="../scripts/roadmap.js" />
