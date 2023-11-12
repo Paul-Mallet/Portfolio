@@ -1,11 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Frame from "../components/Frame.astro";
+import Box from "../components/Box.astro";
 const pageTitle = "About";
 const width = "72vw";
 const height = "72vh";
 const frame_tr = "frame_tr";
+const boxTitle = ["HTML5", "CSS3", "Javascript", "Digital Marketing", "Data Analytics", "Javascript's back", "C Language & Shell", "What's next ?"];
+const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"];
 ---
+
+
+
 
 <BaseLayout pageTitle={pageTitle} width={width} height={height} frame_tr={frame_tr}>
     <Frame width={width} height={height} frame_tr={frame_tr}>
@@ -15,26 +21,20 @@ const frame_tr = "frame_tr";
                 <svg class="about_line" width="72vw" style="z-index: 1;" viewBox="0 0 2570 964" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#ecf0f3" stroke-width="30" stroke-dasharray="80 80"/>
                     <g id="pop">
-                        <circle class="a" cx="63" cy="97" r="63"/>
-                        <circle class="b waiting" cx="1094" cy="248" r="63"/>
-                        <circle class="c waiting" cx="2004" cy="63" r="63"/>
-                        <circle class="d waiting" cx="1726" cy="582" r="63"/>
-                        <circle class="e waiting" cx="617" cy="462" r="63"/>
-                        <circle class="f waiting" cx="576" cy="892" r="63"/>
-                        <circle class="g waiting" cx="1675" cy="890" r="63"/>
-                        <circle class="h waiting" cx="2442" cy="756" r="63"/>
+                        <circle class="" cx="63" cy="97" r="63"/>
+                        <circle class="waiting" cx="1094" cy="248" r="63"/>
+                        <circle class="waiting" cx="2004" cy="63" r="63"/>
+                        <circle class="waiting" cx="1726" cy="582" r="63"/>
+                        <circle class="waiting" cx="617" cy="462" r="63"/>
+                        <circle class="waiting" cx="576" cy="892" r="63"/>
+                        <circle class="waiting" cx="1675" cy="890" r="63"/>
+                        <circle class="waiting" cx="2442" cy="756" r="63"/>
                     </g>
                 </svg>
                 <svg class="about_line" width="72vw" viewBox="0 0 2570 929" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="path" class="" d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="80 80"/>
                 </svg>
-                <div class="box a">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">HTML5</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
-                            <path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
-                        </svg>
-                    </div>
+                <Box boxTitle={boxTitle[0]} boxLogos={boxLogos[0]}>
                     <p>
                         My journey in web development
                         started 3 years ago, I was
@@ -47,16 +47,8 @@ const frame_tr = "frame_tr";
                         pages needed styles to look
                         better...
                     </p>
-                    <div class="bot">
-                        <button style="visibility: hidden;"></button>
-                        <button class="btn_nxt1">Next</button>
-                    </div>
-                </div>
-                <div class="box b waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">CSS3</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[1]}>
                     <p>
                         The Cascading Style Sheet Language
                         was create to solve this kind of
@@ -69,16 +61,8 @@ const frame_tr = "frame_tr";
                         shapes, animations and media
                         queries for the responsive design...
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt2">Next</button>
-                    </div>
-                </div>
-                <div class="box c waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">Javascript</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[2]}>
                     <p>
                         Starting directly with the ES6
                         standard I was not very good for
@@ -92,16 +76,8 @@ const frame_tr = "frame_tr";
                         like designer, video editor which
                         were also presented in my courses.
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt3">Next</button>
-                    </div>
-                </div>
-                <div class="box d waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">Digital Marketing</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M3.9 22.9C10.5 8.9 24.5 0 40 0H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L396.4 195.6C316.2 212.1 256 283 256 368c0 27.4 6.3 53.4 17.5 76.5c-1.6-.8-3.2-1.8-4.7-2.9l-64-48c-8.1-6-12.8-15.5-12.8-25.6V288.9L9 65.3C-.7 53.4-2.8 36.8 3.9 22.9zM288 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm120.8-32.6c.6-.9 1.8-2.1 4.2-3.4c5.1-2.7 12.5-4.1 18.7-4c8.2 .1 17.1 1.8 26.4 4.1c8.6 2.1 17.3-3.1 19.4-11.7s-3.1-17.3-11.7-19.4c-5.6-1.4-11.6-2.7-17.9-3.7V288c0-8.8-7.2-16-16-16s-16 7.2-16 16v9.5c-6.1 1.2-12.3 3.2-18 6.3c-11.8 6.3-23 18.4-21.8 37.2c1 16 11.7 25.3 21.6 30.7c8.8 4.7 19.7 7.8 28.6 10.3l1.8 .5c10.3 2.9 17.9 5.2 23.2 8.3c4.5 2.7 4.7 4.2 4.7 5.6c.1 2.4-.5 3.7-1 4.5c-.6 1-1.8 2.2-4 3.3c-4.7 2.5-11.8 3.8-18.5 3.6c-9.5-.3-18.5-3.1-29.9-6.8c-1.9-.6-3.8-1.2-5.8-1.8c-8.4-2.6-17.4 2.1-20 10.5s2.1 17.4 10.5 20c1.6 .5 3.3 1 5 1.6l0 0 0 0c7 2.3 15.1 4.8 23.7 6.6v11.4c0 8.8 7.2 16 16 16s16-7.2 16-16V438.7c6.2-1.1 12.5-3.1 18.3-6.2c12.1-6.5 22.3-18.7 21.7-36.9c-.5-16.2-10.3-26.3-20.5-32.3c-9.4-5.6-21.2-8.9-30.5-11.5l-.2 0c-10.4-2.9-18.3-5.2-23.9-8.2c-4.8-2.6-4.8-4-4.8-4.5l0-.1c-.1-1.9 .3-2.9 .8-3.6z"/></svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[3]}>
                     <p>
                         After obtain my associate degree,
                         I couldn’t (and always can’t
@@ -114,111 +90,69 @@ const frame_tr = "frame_tr";
                         Media Ads, E-mail Marketing and
                         E-commerce integration strategies.
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt4">Next</button>
-                    </div>
-                </div>
-                <div class="box e waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">Data Analytics</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/></svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[4]}>
                     <p>
-                        And also in the world of data,
-                        with a Google course which
-                        introduced how to data analyse by
-                        asking good questions, prepare
-                        data, process, analyse, share it
-                        with stakeholders and act thanks
-                        to insights discovered. I’ve used
-                        SQL queries to filter and sort
-                        datasets, R language to create
-                        visualisations and Tableau a
-                        visual analytic platform.
+                    And also in the world of data,
+                    with a Google course which
+                    introduced how to data analyse by
+                    asking good questions, prepare
+                    data, process, analyse, share it
+                    with stakeholders and act thanks
+                    to insights discovered. I’ve used
+                    SQL queries to filter and sort
+                    datasets, R language to create
+                    visualisations and Tableau a
+                    visual analytic platform.
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt5">Next</button>
-                    </div>
-                </div>
-                <div class="box f waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">Javascript's back</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[5]}>
                     <p>
-                        But during this time, after done
-                        these courses I was always
-                        searching for my real passion, and
-                        the coding was the response. I’ve
-                        never stop to code, even during
-                        courses, in HTML,CSS and WordPress
-                        but not in JS. It’s a FreeCodeCamp
-                        video which illuminates me and let
-                        me try again. And I was more
-                        self-confident to use it in my
-                        projects.
+                    But during this time, after done
+                    these courses I was always
+                    searching for my real passion, and
+                    the coding was the response. I’ve
+                    never stop to code, even during
+                    courses, in HTML,CSS and WordPress
+                    but not in JS. It’s a FreeCodeCamp
+                    video which illuminates me and let
+                    me try again. And I was more
+                    self-confident to use it in my
+                    projects.
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt6">Next</button>
-                    </div>
-                </div>
-                <div class="box g waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">C Language & Shell</h2>
-                        <svg viewBox="32.18585611720149 20.47 223.6851360941233 247.05999999999997" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M252.71 93.61a21.67 21.67 0 0 0-2.65-10.87 20.74 20.74 0 0 0-7.87-7.67Q198.77 50 155.32 25c-7.8-4.51-15.36-4.35-23.11.23C120.69 32 63 65.09 45.81 75.06c-7.08 4.1-10.52 10.38-10.52 18.54v100.8a21.77 21.77 0 0 0 2.55 10.66 20.63 20.63 0 0 0 8 7.88c17.19 10 74.89 43.05 86.41 49.85 7.75 4.58 15.31 4.74 23.12.23q43.41-25.08 86.87-50.09a20.63 20.63 0 0 0 8-7.88 21.77 21.77 0 0 0 2.55-10.66V93.61z" fill="#000"/>
-                            <path d="M252.73 194.4a21.72 21.72 0 0 1-2.55 10.66 18.58 18.58 0 0 1-1.45 2.24L144 144l98.19-68.93a20.72 20.72 0 0 1 7.86 7.67 21.57 21.57 0 0 1 2.66 10.87c.02 33.6.02 100.79.02 100.79z" fill="#000"/>
-                            <path d="M250.05 82.74L37.81 205.06a21.75 21.75 0 0 1-2.53-10.65V93.6c0-8.16 3.45-14.44 10.52-18.54C63 65.09 120.69 32 132.22 25.21c7.73-4.58 15.3-4.74 23.1-.23q43.41 25.08 86.87 50.09a20.72 20.72 0 0 1 7.86 7.67z" fill="#000"/>
-                            <path d="M148.2 184.72a39.91 39.91 0 0 1-35-20.63q-.53-.94-1-1.92A39.94 39.94 0 0 1 179 119.4c.53.64 1 1.31 1.53 2 .24.33.48.66.7 1l35.07-20.2q-1.28-2.06-2.68-4c-.49-.69-1-1.35-1.48-2A79.9 79.9 0 0 0 78 181.92c.34.64.69 1.27 1 1.9a79.91 79.91 0 0 0 136.86 3.62l-34.29-20.73a39.88 39.88 0 0 1-33.37 18.01z" style="fill: #d6dee9;"/>
-                        </svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[6]}>
                     <p>
-                        This summer I’ve participated at
-                        a 42 pool, like a long hackathon
-                        during 4 weeks to improve my skills.
-                        It was a grateful experience, I’ve
-                        discovered Shell and C language
-                        with 200 other pool mates. The C
-                        was more longer to learn than JS
-                        because it’s low level which means
-                        to be careful. But it’s a powerful
-                        language due, in part, to the
-                        manual memory management.
+                    This summer I’ve participated at
+                    a 42 pool, like a long hackathon
+                    during 4 weeks to improve my skills.
+                    It was a grateful experience, I’ve
+                    discovered Shell and C language
+                    with 200 other pool mates. The C
+                    was more longer to learn than JS
+                    because it’s low level which means
+                    to be careful. But it’s a powerful
+                    language due, in part, to the
+                    manual memory management.
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                        <button class="btn_nxt7">Next</button>
-                    </div>
-                </div>
-                <div class="box h waiting">
-                    <div class="top">
-                        <h2 style="text-decoration: underline;">What's next ?</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" style="height: 2em;" viewBox="0 0 512 512">
-                            <path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"/>
-                        </svg>
-                    </div>
+                </Box>
+                <Box boxTitle={boxTitle[7]}>
                     <p>
-                        Now, after finished the 42
-                        pool I’ve made some new things in
-                        JS again. Like this Portfolio in
-                        Astro.js and GSAP. I would
-                        definitely become developer and
-                        the web will be the first place
-                        where I want to work with. To be a
-                        frontend engineer at first by
-                        using JS frameworks like React to
-                        create applications. And maybe one
-                        day become a fullstack engineer by
-                        using Node.js or Python in backend
-                        devices...
+                    Now, after finished the 42
+                    pool I’ve made some new things in
+                    JS again. Like this Portfolio in
+                    Astro.js and GSAP. I would
+                    definitely become developer and
+                    the web will be the first place
+                    where I want to work with. To be a
+                    frontend engineer at first by
+                    using JS frameworks like React to
+                    create applications. And maybe one
+                    day become a fullstack engineer by
+                    using Node.js or Python in backend
+                    devices...
                     </p>
-                    <div class="bot">
-                        <button>Prev</button>
-                    </div>
-                </div>
+                </Box>
             </div>
         </div>
     </Frame>
@@ -228,10 +162,28 @@ const frame_tr = "frame_tr";
     .container
     {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         padding: 32px;
         overflow: hidden;
+    }
+
+    h1
+    {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+    }
+
+    .roadmap
+    {
+        position: absolute;
+        top: calc(32px + 6vh);
+        left: 32px;
     }
 
     .roadmap .about_line
@@ -250,6 +202,74 @@ const frame_tr = "frame_tr";
     {
         stroke-dasharray: 7420;
         stroke-dashoffset: 7420;
+    }
+
+    #pop circle
+    {
+        fill: #de4900;
+    }
+
+    .box
+    {
+        position: absolute;
+        width: 36vw;
+        padding: 20px;
+        color: #7c8086;
+        background: #d6dee9;
+        border-radius: 24px;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .box:nth-child(0n+3)
+    {
+        opacity: 1;
+    }
+
+    .waiting
+    {
+        display: none;
+    }
+
+    .top
+    {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+
+    svg
+    {
+        height: 2.4em;
+    }
+
+    path
+    {
+        fill: #7c8086;
+    }
+
+    p
+    {
+        font-size: calc(.28rem + .8vw);
+    }
+
+    .bot
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    button
+    {
+        font-size: calc(.48rem + .8vw);
+        padding: 8px 16px;
+        color: #ecf0f3;
+        background: #de4900;
+        border: none;
+        border-radius: 32px;
     }
 
     .anim1
@@ -381,75 +401,137 @@ const frame_tr = "frame_tr";
         }
     }
 
-    #pop circle
+    .anim8
     {
-        fill: #de4900;
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim8 1s linear forwards;
     }
 
-
-    .box
+    @keyframes anim8
     {
-        position: absolute;
-        width: 360px;
-        padding: 20px;
-        color: #7c8086;
-        background: #d6dee9;
-        border-radius: 24px;
-        opacity: 0;
-        z-index: 3;
+        from
+        {
+            stroke-dashoffset: 6242;
+        }
+        to
+        {
+            stroke-dashoffset: 7420;
+        }
     }
 
-    .waiting
+    .anim9
     {
-        display: none;
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim9 1s linear forwards;
     }
 
-    .top
+    @keyframes anim9
     {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        margin-bottom: 4px;
+        from
+        {
+            stroke-dashoffset: 5382;
+        }
+        to
+        {
+            stroke-dashoffset: 6242;
+        }
     }
 
-    svg
+    .anim10
     {
-        height: 2.4em;
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim10 1s linear forwards;
     }
 
-    path
+    @keyframes anim10
     {
-        fill: #7c8086;
+        from
+        {
+            stroke-dashoffset: 4362;
+        }
+        to
+        {
+            stroke-dashoffset: 5382;
+        }
     }
 
-    p
+    .anim11
     {
-        font-size: calc(.28rem + .8vw);
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim11 1s linear forwards;
     }
 
-    .bot
+    @keyframes anim11
     {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 12px;
+        from
+        {
+            stroke-dashoffset: 3240;
+        }
+        to
+        {
+            stroke-dashoffset: 4362;
+        }
     }
 
-    button
+    .anim12
     {
-        font-size: calc(.48rem + .8vw);
-        padding: 8px 16px;
-        color: #ecf0f3;
-        background: #de4900;
-        border: none;
-        border-radius: 32px;
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim12 1s linear forwards;
     }
 
-    .a
+    @keyframes anim12
     {
-        top: calc(100px + 9vh);
-        left: calc(-36px + 3.32vw);
-        opacity: 1;
+        from
+        {
+            stroke-dashoffset: 1940;
+        }
+        to
+        {
+            stroke-dashoffset: 3240;
+        }
+    }
+
+    .anim13
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim13 1s linear forwards;
+    }
+
+    @keyframes anim13
+    {
+        from
+        {
+            stroke-dashoffset: 900;
+        }
+        to
+        {
+            stroke-dashoffset: 1940;
+        }
+    }
+
+    .anim14
+    {
+        stroke-dasharray: 7420;
+        stroke-dashoffset: 7420;
+        animation: anim14 1s linear forwards;
+    }
+
+    @keyframes anim14
+    {
+        from
+        {
+            stroke-dashoffset: 60;
+        }
+        to
+        {
+            stroke-dashoffset: 900;
+        }
     }
 </style>
 
