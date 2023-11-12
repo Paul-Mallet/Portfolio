@@ -1,0 +1,83 @@
+---
+const { boxTitle } = Astro.props;
+const { boxLogos } = Astro.props;
+---
+
+<div class={boxTitle === "HTML5" ? "box" : "box waiting"}>
+    <div class="top">
+        <h2 style="text-decoration: underline;">{boxTitle}</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+            <path d={boxLogos}/>
+        </svg>
+    </div>
+    <slot />
+    <div class="bot">
+        <button class="btn_prv" style={boxTitle === "HTML5" ? "visibility: hidden" : ""}>Prev</button>
+        <button class="btn_nxt" style={boxTitle === "What's next ?" ? "visibility: hidden" : ""}>Next</button>
+    </div>
+</div>
+
+<style>
+    .box
+    {
+        position: absolute;
+        width: 36vw;
+        padding: 20px;
+        color: #7c8086;
+        background: #d6dee9;
+        border-radius: 24px;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .box:nth-child(0n+3)
+    {
+        opacity: 1;
+    }
+
+    .waiting
+    {
+        display: none;
+    }
+
+    .top
+    {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+
+    svg
+    {
+        height: 2.4em;
+    }
+
+    path
+    {
+        fill: #7c8086;
+    }
+
+    p
+    {
+        font-size: calc(.28rem + .8vw);
+    }
+
+    .bot
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    button
+    {
+        font-size: calc(.48rem + .8vw);
+        padding: 8px 16px;
+        color: #ecf0f3;
+        background: #de4900;
+        border: none;
+        border-radius: 32px;
+    }
+</style>
