@@ -36,11 +36,8 @@ const frame_tr = "frame_tr";
                             <span class="error" aria-live="polite"></span>
                             <textarea id="message" name="user_message" maxlength="320" placeholder="Type your request here..." spellcheck="false" required></textarea>
                         </p>
-                        <div class="captcha">
-
-                        </div>
                         <div class="submit_btn">
-                            <button type="submit">Send Message</button>
+                            <button type="submit" class="g-recaptcha" data-sitekey="6LelWw8pAAAAAL5N8d6uQ0sAZy6JFIuZm4moPaPo">Send Message</button>
                             <svg class="error incomplete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
                             </svg>
@@ -99,7 +96,7 @@ const frame_tr = "frame_tr";
                     </p>
                 </div>
             </div>
-        </d>
+        </div>
     </Frame>
 </BaseLayout>
 
@@ -215,7 +212,7 @@ const frame_tr = "frame_tr";
     .left .form .others .message textarea
     {
         font-family: 'Roboto Mono', monospace;
-        font-size: calc(.64rem + .36vw);
+        font-size: calc(.56rem + .36vw);
         background: #d6dee9;
         width: 100%;
         margin-top: 4px;
@@ -246,6 +243,11 @@ const frame_tr = "frame_tr";
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .grecaptcha-badge
+    {
+        visibility: hidden !important;
     }
 
     .left .form .others .submit_btn button
@@ -338,6 +340,17 @@ const frame_tr = "frame_tr";
         align-items: center;
     }
 
+    .recaptcha
+    {
+        position: absolute;
+        bottom: 12vh;
+        width: 72vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: calc(.56rem + .2vw);
+        z-index: 2;
+    }
+
     .right .my_address .address,
     .right .my_phone .phone,
     .right .my_email .envelop
@@ -348,4 +361,5 @@ const frame_tr = "frame_tr";
     }
 </style>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"/>
 <script src="../scripts/form.js"/>
