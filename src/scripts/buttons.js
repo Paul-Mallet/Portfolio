@@ -83,10 +83,24 @@ document.addEventListener("astro:page-load", () => {
     const divsSign = document.querySelectorAll(".left .hand_signature .signature div div");
     const divsBack = document.querySelectorAll(".left .hand_signature a .back div div");
     const divIcon = document.querySelector(".left .hand_signature a .icon");
+    const backLink = document.querySelector(".left .hand_signature a");
 
     gsap.from(divsSign, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
     gsap.from(divsBack, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
     gsap.from(divIcon, { delay: 0.24, duration: 0.48, opacity: 0, scale: 0, x: 40, transformOrigin: "0% 50%", ease: "back.out" });
+
+
+    document.addEventListener("keydown", (e) => {
+        if (e.defaultPrevented)
+        {
+            return;
+        }
+        if (e.key === "Escape")
+        {
+            backLink.click();
+        }
+        return;
+    });
 
     // SOUND //
     const audio = new Audio("sounds/background.mp3");
