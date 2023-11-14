@@ -77,8 +77,30 @@ document.addEventListener("astro:page-load", () => {
             if (name.validity.valid && job.validity.valid
             && email.validity.valid && message.validity.valid)
             {
+                e.preventDefault();
+
+                // reCAPTCHA...//
+                // SEND TO EMAILJS //
+                emailjs.send("service_x2gl58f","template_4zto3qq", {
+                    user_name: name.value,
+                    user_job: job.value,
+                    user_message: message.value,
+                    user_email: email.value
+                }, "Af4epk4E3JnksUZGA")
+                .then(function(res) {
+                    console.log('SUCCESS!', res.status, res.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+
+                name.value = "";
+                job.value = "";
+                email.value = "";
+                message.value = "";
+
                 errorCheck.classList.add("incomplete");
                 validCheck.classList.remove("incomplete");
+
                 // GSAP //
                 const plane = document.querySelector(".right .send_anim .plane-line #plane");
                 const path = document.querySelector(".right .send_anim .plane-line #path");
