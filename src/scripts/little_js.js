@@ -1,14 +1,24 @@
+import { gsap } from "gsap";
+
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
     if (href === "http://localhost:4321/projects")
     {
         // FAQ DIV //
+        const body = document.querySelector("body");
+        const faq_div = document.querySelector(".right .faq");
         const faq_div_btns = document.querySelector(".right .faq .top .btns");
         const faq_plus_btn = document.querySelector(".right .faq .top .btns .plus");
         const faq_minus_btn = document.querySelector(".right .faq .top .btns .minus");
         const faq_p = document.querySelector(".right .faq .content");
         faq_div_btns.addEventListener("click", toggleDiv);
+
+        const max_width = body.clientWidth/2;
+        const max_height = body.clientHeight/2;
+        window.addEventListener("mousemove", (e) => {
+            faq_div.style.transform = `translate(${((e.clientX-max_width)/max_width) * 2}%, ${((e.clientY-max_height)/max_height) * 2}%)`;
+        });
 
         const nd = "not_display";
         function toggleDiv()
