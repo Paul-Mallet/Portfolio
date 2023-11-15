@@ -35,6 +35,26 @@ document.addEventListener("astro:page-load", () => {
         });
     }
 
+    // DARK MODE //
+    const dlMode_btn = document.querySelector(".left .dl_mode");
+    const dark_icon = document.querySelector(".left .dl_mode .dark_icon");
+    const light_icon = document.querySelector(".left .dl_mode .light_icon");
+
+    dlMode_btn.addEventListener("click", () => {
+        const result = dark_icon.classList.toggle("none");
+        light_icon.classList.toggle("none");
+        if (result)
+        {
+            gsap.to(dark_icon, { duration: .32, opacity: 0, scale: .5, transformOrigin: "center", ease: "back.in" });
+            gsap.to(light_icon, { duration: .32, opacity: .4, scale: 1, transformOrigin: "center", ease: "back.out" });
+        }
+        else
+        {
+            gsap.to(dark_icon, { duration: .32, opacity: .4, scale: 1, transformOrigin: "center", ease: "back.out" });
+            gsap.to(light_icon, { duration: .32, opacity: 0, scale: .5, transformOrigin: "center", ease: "back.in" });
+        }
+    });
+
     // SIGNATURE //
     const signatureDiv = document.querySelector(".left .hand_signature");
 
@@ -110,7 +130,6 @@ document.addEventListener("astro:page-load", () => {
     function toggle()
     {
         const not = document.querySelector(".hand_sound button .not")
-        console.log(not.classList.value);
         if (not.getAttribute("class") === "not none")
         {
             audio.pause();
