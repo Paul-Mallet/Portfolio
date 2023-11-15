@@ -3,12 +3,16 @@
 :root
 {
   /*Colors*/
-  --clr-dark: #1a1a1a;
-  --clr-dark-2: #000c32;
   --clr-light: #ecf0f3;
+  --clr-dark: #1a1a1a;
   --clr-orange: #de4900;
   /*Fonts*/
   --ff-primary: 'Roboto Mono', monospace;
+}
+
+.dark_theme
+{
+  --clr-bg: #0a122c;
 }
 
 *, ::after, ::before
@@ -29,6 +33,7 @@ body
   background: var(--clr-light);
   color: var(--clr-black);
   font-size: .875rem;
+  transition: .32s;
 }
 
 h1
