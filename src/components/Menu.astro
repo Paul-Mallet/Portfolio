@@ -1,11 +1,11 @@
 ---
-const menu = ["blog", "about", "projects", "contact"];
+const menu = ["about", "projects", "contact"];
 ---
 
 <nav>
     <ul>
         {menu.map((link) =>
-            <li><a href={"/" + (link === "home" ? "" : link)}>{link}</a></li>
+            <li><a href={"/" + (link)}>{link}</a></li>
         )}
     </ul>
 </nav>
@@ -20,7 +20,7 @@ const menu = ["blog", "about", "projects", "contact"];
 
     a
     {
-        color: #1a1a1a;
+        color: var(--clr-font);
         font-size: 3.2rem;
         font-weight: 800;
         line-height: 2;

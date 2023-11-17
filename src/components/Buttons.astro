@@ -100,11 +100,11 @@
         width: 48px;
         height: 48px;
         font-size: 2rem;
-        background: #ecf0f3;
+        background: var(--clr-bg);
         border: none;
         border-radius: 100%;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgb(186, 196, 214);
+        box-shadow: 2px 2px 4px var(--clr-shadow);
     }
 
     button:active
@@ -114,7 +114,7 @@
 
     svg
     {
-        fill: #1a1a1a;
+        fill: var(--clr-font);
         opacity: .4;
     }
 
@@ -137,23 +137,7 @@
         position: relative;
         margin-right: 32px;
     }
-/*
-    .bg_swap
-    {
-        position: absolute;
-        width: 2vw;
-        height: 2vw;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        background: #0a0a2d;
-        border-radius: 100%;
-        transition: .64s;
-        z-index: -1;
-    }
-*/
+
     .dark_icon, .light_icon
     {
         translate: none;
@@ -170,7 +154,7 @@
 
     .light_icon
     {
-        transform: scale(.5, .5);
+        transform: translate(0px, 0px);
         opacity: .4;
     }
 
@@ -184,7 +168,7 @@
     {
         display: flex;
         align-items: end;
-        color: #1a1a1a;
+        color: var(--clr-font);
         font-size: 1.28rem;
         font-weight: 600;
         margin-bottom: -4%;
@@ -234,7 +218,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        fill: #e44d26;
+        fill: var(--clr-span);
         border-radius: 8px;
         opacity: .72;
     }
@@ -264,11 +248,11 @@
         width: 48px;
         height: 48px;
         font-size: 2rem;
-        background: #ecf0f3;
+        background: var(--clr-bg);
         border: none;
         border-radius: 100%;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgb(186, 196, 214);
+        box-shadow: 2px 2px 4px var(--clr-shadow);
     }
 
     .hand_socials a:active
