@@ -7,7 +7,7 @@
     "description": "A modern portfolio using Astro.js",
     "icons": [{
         "src": "google-touch-icon.png",
-        "sizes": "512x512"
+        "sizes": "148x70"
     }],
 
     "author": "contact@paulmallet.pf",
