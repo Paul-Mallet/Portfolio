@@ -3,16 +3,20 @@
 :root
 {
   /*Colors*/
-  --clr-light: #ecf0f3;
-  --clr-dark: #1a1a1a;
-  --clr-orange: #de4900;
+  --clr-bg: #ecf0f3;
+  --clr-font: #1a1a1a;
+  --clr-shadow: rgb(186, 196, 214);
+  --clr-span: #de4900;
   /*Fonts*/
   --ff-primary: 'Roboto Mono', monospace;
 }
 
-.dark_theme
+
+.dark
 {
+  --clr-font: #ecf0f3;
   --clr-bg: #0a122c;
+  --clr-shadow: rgb(60, 72, 94);
 }
 
 *, ::after, ::before
@@ -30,10 +34,9 @@ body
   width: 100%;
   height: 100vh;
   font-family: var(--ff-primary);
-  background: var(--clr-light);
-  color: var(--clr-black);
+  background: var(--clr-bg);
+  color: var(--clr-font);
   font-size: .875rem;
-  transition: .32s;
 }
 
 h1
@@ -54,6 +57,11 @@ a
 button
 {
   cursor: pointer;
+}
+
+span
+{
+  color: var(--clr-span);
 }
 
 /*View Transitions*/
