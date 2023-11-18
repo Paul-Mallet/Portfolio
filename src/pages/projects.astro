@@ -23,13 +23,13 @@ const frame_tr = "frame_tr";
                     </div>
                     <div class="description">
                         <strong>Description:</strong>
-                        <p>A package of 15 small JS projects to create dynamic websites and webapps. This approach allow users to interact with pages and custom them. It brings a better user experience and can update the data in real time. These projects include random backgrounds, modals, burger menu, filters and many more...</p>
+                        <p>A package of 15 small JS projects to create dynamic websites and webapps. This approach allow users to interact with pages and custom them. It brings a better user experience and can update the data in real time. These projects include random backgrounds, modals, burger menu, fetching and many more...</p>
                     </div>
                     <div class="links">
                         <strong>Links:</strong>
                         <div class="all">
-                            <a href="">www.little-javascript.app</a>
-                            <a href="">Github Repository</a>
+                            <a href="" target="_blank">www.little-javascript.app</a>
+                            <a href="https://github.com/Paul-Mallet/Portfolio" target="_blank">Github Repository</a>
                         </div>
                     </div>
                     <div class="created_at">
@@ -191,7 +191,7 @@ const frame_tr = "frame_tr";
 
     .html
     {
-        background: #e44d26;
+        background: var(--clr-span);
     }
 
     .css
@@ -240,7 +240,7 @@ const frame_tr = "frame_tr";
 
     .left .links .all a
     {
-        color: #1a1a1a;
+        color: var(--clr-font);
         text-decoration: underline;
     }
 
@@ -277,7 +277,7 @@ const frame_tr = "frame_tr";
         margin-right: 1%;
         padding: 24px;
         border-radius: 24px;
-        box-shadow: 4px 4px 12px rgb(186,196,214);
+        box-shadow: 4px 4px 12px var(--clr-shadow);
     }
 
     .right .menu
@@ -287,6 +287,8 @@ const frame_tr = "frame_tr";
         margin-top: -4px;
         opacity: .4;
         cursor: pointer;
+        fill: var(--clr-font);
+        transition: .32s;
     }
 
     .right .random_bg
@@ -426,10 +428,10 @@ const frame_tr = "frame_tr";
         width: 80%;
         margin: 0 auto;
         padding: 12px 12px 6px;
-        background: #ecf0f3;
+        background: var(--clr-bg);
         border-radius: 16px;
         font-size: calc(.18em + .8vw);
-        box-shadow: 4px 4px 8px rgb(186,196,214);
+        box-shadow: 4px 4px 8px var(--clr-shadow);
         z-index: 1;
     }
 
@@ -446,6 +448,7 @@ const frame_tr = "frame_tr";
     .right .faq .top .minus
     {
         cursor: pointer;
+        fill: var(--clr-font);
     }
 
     .not_display
@@ -465,7 +468,6 @@ const frame_tr = "frame_tr";
     {
         height: 10vh;
         overflow-y: hidden;
-        transition: .6s ease;
     }
 
     .hidden
@@ -498,6 +500,7 @@ const frame_tr = "frame_tr";
     .right .shuttle_space svg
     {
         cursor: pointer;
+        fill: var(--clr-font);
     }
 
     .right .shuttle_space p
@@ -559,7 +562,7 @@ const frame_tr = "frame_tr";
 
     .right .timeout span
     {
-        color: #e44d26;
+        color: var(--clr-span);
         margin-left: 0;
         margin-right: calc(12px + .6vw);
     }

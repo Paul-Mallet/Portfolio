@@ -27,7 +27,7 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
             <h1>About Me<span style="color: #de4900;">.</span></h1>
             <div class="roadmap">
                 <svg class="about_line" width="72vw" style="z-index: 1;" viewBox="0 0 2570 964" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#ecf0f3" stroke-width="30" stroke-dasharray="80 80"/>
+                    <path d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke-width="30" stroke-dasharray="80 80"/>
                     <g id="pop">
                         <circle class="" cx="63" cy="97" r="63"/>
                         <circle class="waiting" cx="1094" cy="248" r="63"/>
@@ -40,7 +40,7 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
                     </g>
                 </svg>
                 <svg class="about_line" width="72vw" viewBox="0 0 2570 929" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="path" class="anim" d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke="#1A1A1A" stroke-width="20" stroke-dasharray="80 80"/>
+                    <path id="path" class="anim" d="M55.5 88.0002C210.833 194.334 539.9 357.7 1013.5 268.5C1605.5 157 1690.5 -92.9998 2005.5 57.5001C2370.69 231.977 2266.5 570.5 1681.5 586C1096.5 601.5 604.607 267.692 154.5 620.5C-130 843.5 199.5 1036 818.5 832.5C1313.7 669.7 2053 1194 2507 686.5" stroke-width="20" stroke-dasharray="80 80"/>
                 </svg>
             </div>
             <div class="modal_overlay">
@@ -137,7 +137,6 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
         height: 100%;
         top: 0;
         left: 0;
-        /*background: rgba(9, 9, 69, .4);*/
         border-radius: 32px;
         z-index: 3;
     }
@@ -161,6 +160,16 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
     .about_line path
     {
         fill: none;
+    }
+
+    .about_line path:first-child
+    {
+        stroke: var(--clr-bg);
+    }
+
+    .about_line path:last-child
+    {
+        stroke: var(--clr-font);
     }
 
     .about_line #path
@@ -232,7 +241,7 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
         font-size: calc(.48rem + .8vw);
         padding: 8px 16px;
         color: #ecf0f3;
-        background: #de4900;
+        background: var(--clr-span);
         border: none;
         border-radius: 32px;
     }
