@@ -34,9 +34,46 @@ document.addEventListener("astro:page-load", () => {
     // DARK MODE //
     const dark_icon = document.querySelector(".left .dl_mode .dark_icon");
     const light_icon = document.querySelector(".left .dl_mode .light_icon");
+    //localStorage.setItem(), getItem()
 
     dlMode_btn.addEventListener("click", () => {
-        
+        const doc = document.documentElement;
+        doc.classList.toggle("dark");
+
+        if (doc.classList.contains("dark"))
+        {
+            gsap.to(dark_icon, {
+                duration: .32,
+                opacity: 0,
+                scale: 0,
+                ease: "back.in",
+            });
+            gsap.to(light_icon, {
+                delay: .24,
+                duration: .32,
+                opacity: .4,
+                scale: 1,
+                ease: "back.out",
+            });
+            localStorage.setItem("theme", "dark");
+        }
+        else
+        {
+            gsap.to(light_icon, {
+                duration: .32,
+                opacity: 0,
+                scale: 0,
+                ease: "back.in",
+            });
+            gsap.to(dark_icon, {
+                delay: .24,
+                duration: .32,
+                opacity: .4,
+                scale: 1,
+                ease: "back.out",
+            });
+            localStorage.setItem("theme", "");
+        }
     });
 
     // SIGNATURE //
