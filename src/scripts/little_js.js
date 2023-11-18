@@ -28,12 +28,14 @@ document.addEventListener("astro:page-load", () => {
                 faq_minus_btn.classList.add(nd);
                 faq_plus_btn.classList.remove(nd);
                 faq_p.classList.add("hidden");
+                gsap.to(faq_p, {duration: .6, height: "0vh"});
             }
             else
             {
                 faq_minus_btn.classList.remove(nd);
                 faq_plus_btn.classList.add(nd);
                 faq_p.classList.remove("hidden");
+                gsap.to(faq_p, {duration: .6, height: "10vh"});
             }
         }
 

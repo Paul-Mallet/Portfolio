@@ -126,4 +126,4 @@ document.addEventListener("astro:page-load", () => {
             e.preventDefault();
         });
     }
-})
+});

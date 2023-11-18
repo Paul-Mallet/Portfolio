@@ -2,73 +2,57 @@ import { gsap } from "gsap";
 
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
-
+    const dlMode_btn = document.querySelector(".left .dl_mode");
+    const signature_div = document.querySelector(".left .signature");
+    const sound_btn = document.querySelector(".right .sound");
+    const socials_links = document.querySelector(".right .hand_socials");
+ 
     // HANDWRITING //
     if (href === "http://localhost:4321/")
     {
-        const dlModeContainer = document.querySelector(".container-dl-mode");
         const dlMode = document.querySelector(".dl-mode");
-
-        dlModeContainer.addEventListener("mouseover", () => {
+        dlMode_btn.addEventListener("mouseover", () => {
             dlMode.classList.remove("disp");
         });
 
-        const signatureContainer = document.querySelector(".container-signature");
         const signature = document.querySelector(".signature");
-
-        signatureContainer.addEventListener("mouseover", () => {
+        signature_div.addEventListener("mouseover", () => {
             signature.classList.remove("disp");
         });
 
-        const soundContainer = document.querySelector(".container-sound");
         const sound = document.querySelector(".sound");
-
-        soundContainer.addEventListener("mouseover", () => {
+        sound_btn.addEventListener("mouseover", () => {
             sound.classList.remove("disp");
         });
 
-        const socialsContainer = document.querySelector(".container-socials");
         const socials = document.querySelector(".socials");
-
-        socialsContainer.addEventListener("mouseover", () => {
+        socials_links.addEventListener("mouseover", () => {
             socials.classList.remove("disp");
         });
     }
 
     // DARK MODE //
-    const dlMode_btn = document.querySelector(".left .dl_mode");
     const dark_icon = document.querySelector(".left .dl_mode .dark_icon");
     const light_icon = document.querySelector(".left .dl_mode .light_icon");
 
     dlMode_btn.addEventListener("click", () => {
-        const result = dark_icon.classList.toggle("none");
-        light_icon.classList.toggle("none");
-        if (result)
-        {
-            gsap.to(dark_icon, { duration: .32, opacity: 0, scale: .5, transformOrigin: "center", ease: "back.in" });
-            gsap.to(light_icon, { duration: .32, opacity: .4, scale: 1, transformOrigin: "center", ease: "back.out" });
-        }
-        else
-        {
-            gsap.to(dark_icon, { duration: .32, opacity: .4, scale: 1, transformOrigin: "center", ease: "back.out" });
-            gsap.to(light_icon, { duration: .32, opacity: 0, scale: .5, transformOrigin: "center", ease: "back.in" });
-        }
+        
     });
 
     // SIGNATURE //
-    const signatureDiv = document.querySelector(".left .hand_signature");
+    const signature_container = document.querySelector(".left .hand_signature");
 
     function getUrl()
     {
         if (href === "http://localhost:4321/")
         {
-            signatureDiv.firstChild.classList.remove("none");
-            signatureDiv.lastChild.classList.add("none");
+            signature_container.firstChild.classList.remove("none");
+            signature_container.lastChild.classList.add("none");
         }
         else
         {
-            signatureDiv.firstChild.classList.add("none");
-            signatureDiv.lastChild.classList.remove("none");
+            signature_container.firstChild.classList.add("none");
+            signature_container.lastChild.classList.remove("none");
         }
     }
     getUrl();
@@ -124,7 +108,6 @@ document.addEventListener("astro:page-load", () => {
 
     // SOUND //
     const audio = new Audio("sounds/background.mp3");
-    const sound_btn = document.querySelector(".right .hand_sound button");
     sound_btn.addEventListener("click", toggle);
 
     function toggle()
