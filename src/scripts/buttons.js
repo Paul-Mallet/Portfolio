@@ -34,44 +34,21 @@ document.addEventListener("astro:page-load", () => {
     // DARK MODE //
     const dark_icon = document.querySelector(".left .dl_mode .dark_icon");
     const light_icon = document.querySelector(".left .dl_mode .light_icon");
-    //localStorage.setItem(), getItem()
+    const doc = document.documentElement;
 
     dlMode_btn.addEventListener("click", () => {
-        const doc = document.documentElement;
         doc.classList.toggle("dark");
 
         if (doc.classList.contains("dark"))
         {
-            gsap.to(dark_icon, {
-                duration: .32,
-                opacity: 0,
-                scale: 0,
-                ease: "back.in",
-            });
-            gsap.to(light_icon, {
-                delay: .24,
-                duration: .32,
-                opacity: .4,
-                scale: 1,
-                ease: "back.out",
-            });
+            gsap.to(dark_icon, { duration: .24, opacity: 0, scale: 0, ease: "back.in", });
+            gsap.to(light_icon, { delay: .16, duration: .24, opacity: .4, scale: 1, ease: "back.out", });
             localStorage.setItem("theme", "dark");
         }
         else
         {
-            gsap.to(light_icon, {
-                duration: .32,
-                opacity: 0,
-                scale: 0,
-                ease: "back.in",
-            });
-            gsap.to(dark_icon, {
-                delay: .24,
-                duration: .32,
-                opacity: .4,
-                scale: 1,
-                ease: "back.out",
-            });
+            gsap.to(light_icon, { duration: .24, opacity: 0, scale: 0, ease: "back.in", });
+            gsap.to(dark_icon, { delay: .16, duration: .24, opacity: .4, scale: 1, ease: "back.out", });
             localStorage.setItem("theme", "");
         }
     });
@@ -149,20 +126,19 @@ document.addEventListener("astro:page-load", () => {
 
     function toggle()
     {
-        const not = document.querySelector(".hand_sound button .not")
-        if (not.getAttribute("class") === "not none")
+        const not_svg = document.querySelector(".hand_sound button .not")
+        if (not_svg.getAttribute("class") === "not none")
         {
+            console.log(not_svg);
             audio.pause();
-            not.classList.remove("none");
-            localStorage.removeItem("bg_sound");
+            not_svg.classList.remove("none");
         }
         else
         {
             audio.play();
-            audio.volume = 0.08;
-            not.classList.add("none");
             audio.loop = true;
-            localStorage.setItem("bg_sound", "none");
+            audio.volume = 0.08;
+            not_svg.classList.add("none");
         }
     }
 });
