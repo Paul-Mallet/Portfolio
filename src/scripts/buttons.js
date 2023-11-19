@@ -129,7 +129,6 @@ document.addEventListener("astro:page-load", () => {
         const not_svg = document.querySelector(".hand_sound button .not")
         if (not_svg.getAttribute("class") === "not none")
         {
-            console.log(not_svg);
             audio.pause();
             not_svg.classList.remove("none");
         }
