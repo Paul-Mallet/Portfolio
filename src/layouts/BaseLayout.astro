@@ -20,14 +20,20 @@ const { pageTitle } = Astro.props;
 </head>
 <body>
     <script>
-        /*
+        const dark_icon = document.querySelector(".left .dl_mode .dark_icon");
+        const light_icon = document.querySelector(".left .dl_mode .light_icon");
         const setDarkMode = () => {
-
+            const theme = localStorage.getItem("theme");
+            document.documentElement.className = theme;
+            if (theme === "dark")
+            {
+                dark_icon.setAttribute("style", "opacity:0;");
+                light_icon.setAttribute("style", "opacity:.4;scale:1;");
+            }
         };
         setDarkMode();
-        */
 
-        //document.addEventListener("astro:after-swap", setDarkMode);
+        document.addEventListener("astro:after-swap", setDarkMode);
     </script>
     <slot />
     <Buttons />
