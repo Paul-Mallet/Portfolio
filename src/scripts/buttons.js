@@ -121,7 +121,7 @@ document.addEventListener("astro:page-load", () => {
     });
 
     // SOUND //
-    const audio = new Audio("sounds/background.mp3");
+    const audio = document.querySelector(".hand_sound button audio");
     sound_btn.addEventListener("click", toggle);
 
     function toggle()
@@ -135,7 +135,6 @@ document.addEventListener("astro:page-load", () => {
         else
         {
             audio.play();
-            audio.loop = true;
             audio.volume = 0.08;
             not_svg.classList.add("none");
         }
