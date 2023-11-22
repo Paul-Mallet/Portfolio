@@ -6,7 +6,7 @@ gsap.registerPlugin(MotionPathPlugin);
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
-    if (href === "http://localhost:4321/contact" || href === "https://portfolio-pm.netlify.app/contact")
+    if (href === "http://localhost:4321/contact/" || href === "https://portfolio-pm.netlify.app/contact/")
     {
         // VALIDATIONS //
         const form = document.querySelector("form");
