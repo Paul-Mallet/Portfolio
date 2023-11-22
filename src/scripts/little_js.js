@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
-    if (href === "http://localhost:4321/projects" || href === "https://portfolio-pm.netlify.app/projects")
+    if (href === "http://localhost:4321/projects" || href === "https://portfolio-pm.netlify.app/projects/")
     {
         // FAQ DIV //
         const body = document.querySelector("body");
