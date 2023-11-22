@@ -8,7 +8,7 @@ document.addEventListener("astro:page-load", () => {
     const socials_links = document.querySelector(".right .hand_socials");
  
     // HANDWRITING //
-    if (href === "http://localhost:4321/")
+    if (href === "http://localhost:4321/" || href === "https://portfolio-pm.netlify.app/")
     {
         const dlMode = document.querySelector(".dl-mode");
         dlMode_btn.addEventListener("mouseover", () => {
@@ -58,7 +58,7 @@ document.addEventListener("astro:page-load", () => {
 
     function getUrl()
     {
-        if (href === "http://localhost:4321/")
+        if (href === "http://localhost:4321/" || href === "https://portfolio-pm.netlify.app/")
         {
             signature_container.firstChild.classList.remove("none");
             signature_container.lastChild.classList.add("none");
