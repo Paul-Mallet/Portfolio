@@ -8,6 +8,8 @@ Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
 
 ![Projects Page](https://drive.google.com/uc?export=view&id=108UE1P7mvXc0xBjs01Yw_sbW6fgQB9O9)
 
+## Tech Stack
+
 <table>
   <thead>
     <tr>
@@ -19,12 +21,12 @@ Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
   <tbody>
     <tr>
       <td align="left"><a href="https://astro.build/" rel="nofollow">Astro</a></td>
-      <td align="left"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/89e69f2170a86e4642f55f25097acfd5d862a4d51ed048176c67f0d2defb93b5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d314c554a786f4c76434c6d45796c4b457377434c4c464b68424555736e42795270"><img src="https://camo.githubusercontent.com/89e69f2170a86e4642f55f25097acfd5d862a4d51ed048176c67f0d2defb93b5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d314c554a786f4c76434c6d45796c4b457377434c4c464b68424555736e42795270" alt="Astro_Logo" style="max-width: 200px;"></a></td>
+      <td align="left"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/89e69f2170a86e4642f55f25097acfd5d862a4d51ed048176c67f0d2defb93b5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d314c554a786f4c76434c6d45796c4b457377434c4c464b68424555736e42795270"><img src="https://camo.githubusercontent.com/89e69f2170a86e4642f55f25097acfd5d862a4d51ed048176c67f0d2defb93b5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d314c554a786f4c76434c6d45796c4b457377434c4c464b68424555736e42795270" alt="Astro_Logo" style="width: 200px;"></a></td>
       <td align="left">This JS framework is used to build static site generator which means high content websites(ex: blog, e-commerce). It works with the View Transitions API(experimental) to create fluid and better user-experience navigation and that's why I've decided to choose it for this project.</td>
     </tr>
     <tr>
     <td align="center"><a href="https://gsap.com/" rel="nofollow">GSAP</a></td>
-    <td align="center"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9de0107ead6151945608b5b65a31e360deaccf0179ad87c3473ec374d710ae3a/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317842376a4a324b4c745442735158466777453261715f2d594d644a3578375661"><img src="https://camo.githubusercontent.com/9de0107ead6151945608b5b65a31e360deaccf0179ad87c3473ec374d710ae3a/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317842376a4a324b4c745442735158466777453261715f2d594d644a3578375661" alt="GSAP_Logo" style="max-width: 200px;"></a></td>
+    <td align="center"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/9de0107ead6151945608b5b65a31e360deaccf0179ad87c3473ec374d710ae3a/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317842376a4a324b4c745442735158466777453261715f2d594d644a3578375661"><img src="https://camo.githubusercontent.com/9de0107ead6151945608b5b65a31e360deaccf0179ad87c3473ec374d710ae3a/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d317842376a4a324b4c745442735158466777453261715f2d594d644a3578375661" alt="GSAP_Logo" style="width: 200px;"></a></td>
     <td align="left">GSAP is a JS animation framework. It allows to create interactive and engaging websites with many animation properties like duration, positions, eases... It was my personal choice to bring alive few svgs and texts into portfolio-pm.fr.</td>
     </tr>
   </tbody>
