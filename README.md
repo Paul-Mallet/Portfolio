@@ -11,7 +11,7 @@ Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
 ## Tech Stack
 
 [![Astro](![Astro_Logo](https://drive.google.com/uc?export=view&id=1ZBrkGKGI8iGSseGDHurb0UP2qsujvzlP))](https://astro.build/)
-[![GSAP](![GSAP_Logo](https://drive.google.com/uc?export=view&id=1xB7jJ2KLtTBsQXFgwE2aq_-YMdJ5x7Va))](https://gsap.com/)
+[![GSAP](![GSAP_Logo]([https://drive.google.com/uc?export=view&id=1xB7jJ2KLtTBsQXFgwE2aq_-YMdJ5x7Va](https://drive.google.com/file/d/1xB7jJ2KLtTBsQXFgwE2aq_-YMdJ5x7Va/view?usp=sharing)))](https://gsap.com/)
 
 ## Project Structure
 
