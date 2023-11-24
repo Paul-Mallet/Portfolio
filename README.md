@@ -12,7 +12,7 @@ My personal social accounts:
 
 ## Tech Stack
 
-After searching during few days about what kind of tech I could use, I found 2 well known JS frameworks. I learnt how to structure a project and to animate properly element of the DOM.
+After searching during few days about what kind of tech I could use, I found 2 well known JS frameworks. I've learnt how to structure a project and to animate properly element of the DOM.
 
 | Name | Logo     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -21,7 +21,7 @@ After searching during few days about what kind of tech I could use, I found 2 w
 
 ## Project Structure
 
-Inside this repository, you'll see this folders and files inside the src main folder:
+Inside this repository, you'll find folders and files in the src folder. The order is the same as this:
 
 ```text
 /
