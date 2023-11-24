@@ -47,7 +47,7 @@ Inside this portfolio, you'll see this folders and files:
 │   │   ├── little_js.js
 │   │   ├── menu.js
 │   │   └── roadmap.js
-│   ├── styles/
-│   │   └── global.css
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
