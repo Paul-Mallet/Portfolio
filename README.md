@@ -10,6 +10,8 @@ Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
 
 ## Tech Stack
 
+After searching during few days about what kind of tech I could use, I found 2 well known JS frameworks. I learnt how to structure a project and to animate properly element of the DOM.
+
 | Name | Logo     | Description                |
 | :-------- | :------- | :------------------------- |
 | [Astro](https://astro.build/) | <img src="https://camo.githubusercontent.com/89e69f2170a86e4642f55f25097acfd5d862a4d51ed048176c67f0d2defb93b5/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f6578706f72743d766965772669643d314c554a786f4c76434c6d45796c4b457377434c4c464b68424555736e42795270" alt="Astro_Logo" data-canonical-src="https://drive.google.com/uc?export=view&amp;id=1LUJxoLvCLmEylKEswCLLFKhBEUsnByRp" style="width: 200px;"> | This JS framework is used to build static site generator which means high content websites(ex: blog, e-commerce). It works with the View Transitions API(experimental) to create fluid and better user-experience navigation and that's why I've decided to choose it for this project. |
@@ -17,7 +19,7 @@ Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
 
 ## Project Structure
 
-Inside this portfolio, you'll see this folders and files:
+Inside this repository, you'll see this folders and files inside the src main folder:
 
 ```text
 /
