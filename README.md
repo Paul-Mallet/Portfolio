@@ -1,54 +1,53 @@
-# Astro Starter Kit: Basics
+# Paul Mallet's Portfolio.
 
-```sh
-npm create astro@latest -- --template basics
-```
+Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![LinkedIn Profil](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](#)
+[![X(ex: Twitter) Profil](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/PaulMal33466829)
+[![Stack Overflow Profil](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/22239802/paul)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Projects Page](https://drive.google.com/file/d/108UE1P7mvXc0xBjs01Yw_sbW6fgQB9O9/view?usp=sharing)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Tech Stack
 
-## 🚀 Project Structure
+[![Astro](![Astro_Logo](https://drive.google.com/uc?export=view&id=1ZBrkGKGI8iGSseGDHurb0UP2qsujvzlP))](https://astro.build/)
+[![GSAP](![GSAP_Logo](https://drive.google.com/uc?export=view&id=1xB7jJ2KLtTBsQXFgwE2aq_-YMdJ5x7Va))](https://gsap.com/)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
+
+Inside this portfolio, you'll see this folders and files:
 
 ```text
 /
 ├── public/
+│   ├── sounds/
+│   │   └── background.mp3
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── Handwriting/
+│   │   │   ├── DarkMode.astro
+│   │   │   ├── Signature.astro
+│   │   │   ├── Socials.astro
+│   │   │   └── Sound.astro
+│   │   ├── Box.astro
+│   │   ├── Buttons.astro
+│   │   ├── Frame.astro
+│   │   └── Menu.astro
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   │   └── BaseLayout.astro
+│   ├── pages/
+│   │   ├── about.astro
+│   │   ├── contact.astro
+│   │   ├── index.astro
+│   │   └── projects.astro
+│   ├── scripts/
+│   │   ├── buttons.js
+│   │   ├── form.js
+│   │   ├── little_js.js
+│   │   ├── menu.js
+│   │   └── roadmap.js
+│   ├── styles/
+│   │   └── global.css
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
