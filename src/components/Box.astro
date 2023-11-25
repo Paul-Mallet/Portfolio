@@ -1,12 +1,13 @@
 ---
 const { boxTitle } = Astro.props;
 const { boxLogos } = Astro.props;
+const { height } = Astro.props;
 const { viewBoxSize } = Astro.props;
 ---
 <div class={boxTitle === "HTML5" ? "box" : "box waiting"}>
     <div class="top">
         <h2 style="text-decoration: underline;">{boxTitle}</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox={viewBoxSize}>
+        <svg xmlns="http://www.w3.org/2000/svg" height={height} viewBox={viewBoxSize}>
             <path d={boxLogos}/>
         </svg>
     </div>
