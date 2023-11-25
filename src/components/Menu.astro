@@ -11,6 +11,11 @@ const menu = ["about", "projects", "contact"];
 </nav>
 
 <style>
+    nav
+    {
+        z-index: 10;
+    }
+
     ul
     {
         display: flex;
@@ -26,7 +31,14 @@ const menu = ["about", "projects", "contact"];
         line-height: 2;
         letter-spacing: .2rem;
         text-transform: capitalize;
+        opacity: .4;
+        transition: .32s;
+    }
+
+    a:hover
+    {
+        font-size: 3.6rem;
+        letter-spacing: 4px;
+        opacity: 1;
     }
 </style>
-
-<script src="../scripts/menu.js"/>
