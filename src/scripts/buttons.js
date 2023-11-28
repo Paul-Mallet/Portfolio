@@ -135,7 +135,7 @@ document.addEventListener("astro:page-load", () => {
         else
         {
             audio.play();
-            audio.volume = 0.04;
+            audio.volume = 0.03;
             not_svg.classList.add("none");
         }
     }
