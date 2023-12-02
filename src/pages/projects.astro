@@ -282,6 +282,7 @@ const frame_tr = "frame_tr";
 
     .right .menu
     {
+        position: relative;
         display: flex;
         align-items: center;
         margin-top: -4px;
@@ -296,7 +297,7 @@ const frame_tr = "frame_tr";
         position: absolute;
         top: 6%;
         right: 6%;
-        height: 15vh;
+        height: calc(3em + 5vw);
     }
 
     .right .target
@@ -318,8 +319,8 @@ const frame_tr = "frame_tr";
     {
         top: 18vh;
         left: 37%;
-        width: 1.6em;
-        height: 1.6em;
+        width: calc(1em + .6vw);
+        height: calc(1em + .6vw);
         animation: roundhtml 4s ease-in-out 0s infinite normal none;
     }
 
@@ -353,8 +354,8 @@ const frame_tr = "frame_tr";
     {
         bottom: 12vh;
         right: 33%;
-        width: 2em;
-        height: 2em;
+        width: calc(1.4em + .6vw);
+        height: calc(1.4em + .6vw);
         animation: roundcss 4s ease-in-out 0s infinite normal none;
     }
 
@@ -388,8 +389,8 @@ const frame_tr = "frame_tr";
     {
         top: 20vh;
         right: 50%;
-        width: 1.2em;
-        height: 1.2em;
+        width: calc(.8em + .6vw);
+        height: calc(.8em + .6vw);
         animation: roundjs 4s ease-in-out 0s infinite normal none;
     }
 
@@ -430,7 +431,7 @@ const frame_tr = "frame_tr";
         padding: 12px 12px 6px;
         background: var(--clr-bg);
         border-radius: 16px;
-        font-size: calc(.18em + .8vw);
+        font-size:  calc(.16rem + .8vw);
         box-shadow: 4px 4px 8px var(--clr-shadow);
         z-index: 1;
     }
@@ -565,6 +566,74 @@ const frame_tr = "frame_tr";
         color: var(--clr-span);
         margin-left: 0;
         margin-right: calc(12px + .6vw);
+    }
+
+    @media(max-width:940px)
+    {
+        section
+        {
+            margin-right: 16px;
+            margin-top: 24px;
+            padding: 32px 36px;
+            flex-direction: column;
+            overflow-y: scroll;
+        }
+
+        section::-webkit-scrollbar
+        {
+            border-radius: 10px;
+            box-shadow: inset 1px 1px 4px rgb(186,196,214);
+        }
+
+        section::-webkit-scrollbar-thumb
+        {
+            background: #d6dee9;
+            border-radius: 10px;
+            opacity: .8;
+        }
+
+        section::-webkit-scrollbar-corner
+        {
+            background: #ecf0f3;
+        }
+
+        .left
+        {
+            width: 100%;
+        }
+
+        .left .data
+        {
+            height: auto;
+            margin-bottom: 4vh;
+            padding-right: 0;
+        }
+
+        .right
+        {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .right .menu
+        {
+            margin-bottom: 42vh;
+        }
+
+        .right .random_bg
+        {
+            height: calc(10vw + 3em);
+        }
+
+        .right .faq
+        {
+            font-size:  calc(.32rem + 1vw);
+        }
+
+        .right .faq .content
+        {
+            height: 8vh;
+        }
     }
 </style>
 
