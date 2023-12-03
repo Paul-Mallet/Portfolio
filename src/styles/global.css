@@ -41,22 +41,34 @@ body
 
 h1
 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1rem + .8vw);
+}
+
+h2
+{
+  font-size: calc(1rem + .5vw);
 }
 
 li
 {
   list-style: none;
+  font-size: calc(.72rem + .4vw);
 }
 
 a
 {
   text-decoration: none;
+  font-size: calc(.72rem + .4vw);
 }
 
 button
 {
   cursor: pointer;
+}
+
+p
+{
+  font-size: calc(.6rem + .4vw);
 }
 
 span

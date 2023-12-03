@@ -45,10 +45,10 @@ const frame_tr = "frame_tr";
             </div>
             <div class="right">
                 <div class="menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512">
+                    <svg class="burger" xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512">
                         <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2.8em" style="margin-left: .4vw;" viewBox="0 0 384 512">
+                    <svg class="cross" xmlns="http://www.w3.org/2000/svg" height="2.8em" style="margin-left: .4vw;" viewBox="0 0 384 512">
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                     </svg>
                 </div>
@@ -509,7 +509,7 @@ const frame_tr = "frame_tr";
         position: absolute;
         top: -24px;
         margin-bottom: 4px;
-        font-size: calc(.24em + .8vw);
+        font-size: calc(.6em + .4vw);
         font-weight: 600;
         opacity: .4;
         animation: hold 3s ease-in-out 0s infinite normal none;
@@ -600,11 +600,26 @@ const frame_tr = "frame_tr";
             width: 100%;
         }
 
+        .right .menu .burger
+        {
+            height: calc(1.8rem + .4vw);
+        }
+
+        .right .menu .cross
+        {
+            height: calc(2.4em + .4vw);
+        }
+
         .left .data
         {
             height: auto;
             margin-bottom: 4vh;
             padding-right: 0;
+        }
+
+        .left .data .tech_stack ul, .data .all, .created_at p
+        {
+            margin-top: 2px;
         }
 
         .right
@@ -641,6 +656,23 @@ const frame_tr = "frame_tr";
         .right .score
         {
             font-size: 1em;
+        }
+    }
+
+    @media(max-width: 640px)
+    {
+        .left .data .tech_stack ul,
+        .left .description p,
+        .left .links .all,
+        .left .progress .progress_bar,
+        .left .progress p
+        {
+            margin-top: 0;
+        }
+
+        .right .random_bg
+        {
+            height: calc(3em + 5vw);
         }
     }
 </style>
