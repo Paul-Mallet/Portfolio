@@ -485,6 +485,39 @@ const boxLogos = ["M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H1
             stroke-dashoffset: 900;
         }
     }
+
+    @media(max-width: 940px)
+    {
+        .roadmap
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .roadmap svg
+        {
+            margin-bottom: 8vh;
+        }
+    }
+
+    @media(max-width: 720px)
+    {
+        .roadmap
+        {
+            display: flex;
+            align-items: center;
+            top: 0;
+            left: 0;
+        }
+
+        .roadmap svg
+        {
+            margin-top: 32px;
+            margin-bottom: 0;
+            transform: rotate(90deg) scale(1.2);
+        }
+
+    }
 </style>
 
 <script src="../scripts/roadmap.js" />
