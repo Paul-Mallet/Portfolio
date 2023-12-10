@@ -32,7 +32,7 @@ body
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: -webkit-fill-available;
+  height: 100vh;
   font-family: var(--ff-primary);
   background: var(--clr-bg);
   color: var(--clr-font);
@@ -74,6 +74,14 @@ p
 span
 {
   color: var(--clr-span);
+}
+
+@media(max-width: 640px)
+{
+  body
+  {
+    height: 90vh;
+  }
 }
 
 /*View Transitions*/
