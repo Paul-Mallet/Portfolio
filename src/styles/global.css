@@ -76,6 +76,15 @@ span
   color: var(--clr-span);
 }
 
+input,
+textarea,
+button,
+select,
+a
+{
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media(max-width: 640px)
 {
   body
