@@ -82,4 +82,18 @@ const { viewBoxSize } = Astro.props;
         border: none;
         border-radius: 32px;
     }
+
+    @media(max-width: 640px)
+    {
+        .box
+        {
+            width: 60vw;
+        }
+
+        button
+        {
+            font-size: calc(.64rem + .8vw);
+            padding: 6px 12px;
+        }
+    }
 </style>
