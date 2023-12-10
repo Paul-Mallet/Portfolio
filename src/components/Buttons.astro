@@ -31,7 +31,7 @@
                         <div style="position:relative;display:inline-block;">k</div>
                     </div>
                 </div>
-                <div class="esc" style="position: absolute; bottom: 0; right: -52px; margin-bottom: 6%; opacity: 0; pointer-events: none; animation: esc 2.4s ease-in 1s infinite alternate">
+                <div class="esc">
                     (ESC)
                 </div>
             </a>
@@ -72,7 +72,7 @@
 <style>
     .left, .right
     {
-        position: fixed;
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -194,10 +194,21 @@
         transition: .2s;
     }
 
+    .hand_signature .esc
+    {
+        position: absolute;
+        bottom: 0;
+        font-size: 1rem;
+        right: -52px;
+        margin-bottom: 6%;
+        opacity: 0;
+        pointer-events: none;
+        animation: esc 2.4s ease-in 1s infinite alternate;
+    }
+
     .hand_signature:hover .esc
     {
         display: none;
-        font-size: 1rem;
     }
 
     .hand_signature:hover .back
@@ -309,6 +320,7 @@
         .hand_signature .esc
         {
             font-size: calc(.8rem + .4vw);
+            right: -42px;
         }
 
         .sound .not

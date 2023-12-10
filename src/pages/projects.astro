@@ -143,7 +143,6 @@ const frame_tr = "frame_tr";
     .right
     {
         width: 50%;
-        height: 100%;
     }
 
     .left .data
@@ -452,6 +451,11 @@ const frame_tr = "frame_tr";
         fill: var(--clr-font);
     }
 
+    .right .faq .content
+    {
+        font-size: calc(.6rem + .4vw);
+    }
+
     .not_display
     {
         display: none;
@@ -664,6 +668,7 @@ const frame_tr = "frame_tr";
         .left .data .tech_stack ul,
         .left .description p,
         .left .links .all,
+        .left .created_at p,
         .left .progress .progress_bar,
         .left .progress p
         {

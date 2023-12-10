@@ -41,7 +41,7 @@ body
 
 h1
 {
-  font-size: calc(1rem + .8vw);
+  font-size: calc(.92rem + .92vw);
 }
 
 h2
@@ -52,7 +52,7 @@ h2
 li
 {
   list-style: none;
-  font-size: calc(.72rem + .4vw);
+  font-size: calc(.8rem + .4vw);
 }
 
 a
@@ -68,7 +68,7 @@ button
 
 p
 {
-  font-size: calc(.6rem + .4vw);
+  font-size: calc(.72rem + .4vw);
 }
 
 span
