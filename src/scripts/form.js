@@ -102,8 +102,8 @@ document.addEventListener("astro:page-load", () => {
                 validCheck.classList.remove("incomplete");
 
                 // GSAP //
-                const plane = document.querySelector(".container__inner--right .send_anim .svg__plane-line #plane");
-                const path = document.querySelector(".container__inner--right .send_anim .svg__plane-line #path");
+                const plane = document.querySelector(".container__inner--right .inner__paths .svg__plane-line #plane");
+                const path = document.querySelector(".container__inner--right .inner__paths .svg__plane-line #path");
 
                 gsap.to(plane, {
                     duration: 2.4,
