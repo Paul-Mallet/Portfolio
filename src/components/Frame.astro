@@ -10,7 +10,7 @@ const { frame_tr } = Astro.props;
 
 
 
-<style define:vars={{width, height}}>
+<style define:vars={{width, height}} lang="scss">
     .frame_container
     {
         position: relative;
@@ -24,6 +24,11 @@ const { frame_tr } = Astro.props;
         box-shadow: inset 8px 8px 16px var(--clr-shadow);
         z-index: 1;
         overflow: hidden;
+        overflow-y: scroll;
         transition: .32s;
+
+        @media(max-height: 500px) {
+            height: 66vh;
+        }
     }
 </style>

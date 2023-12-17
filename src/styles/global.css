@@ -93,6 +93,14 @@ a
   }
 }
 
+@media(max-height: 500px)
+{
+  body
+  {
+    height: 100vh;
+  }
+}
+
 /*View Transitions*/
 
 ::view-transition-old(frame_tr),
