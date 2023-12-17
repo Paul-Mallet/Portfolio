@@ -13,7 +13,7 @@ const frame_tr = "frame_tr";
             <div class="container__inner container__inner--left"><!-- -->
                 <h1 class="container__h1">Contact<span style="color: #de4900;">.</span></h1>
                 <form class="container__form" method="post" novalidate>
-                    <div class="form__inner form__inner--row">
+                    <div class="form__inner form__inner--half">
                         <p class="p__name">
                             <label for="name">Your Name</label>
                             <span class="form__error" aria-live="polite"></span>
@@ -25,7 +25,7 @@ const frame_tr = "frame_tr";
                             <input type="text" id="job" name="user_job" maxlength="56" placeholder="ex: Software Engineer" required></input>
                         </p>
                     </div>
-                    <div class="form__inner form__inner--column">
+                    <div class="form__inner form__inner--full">
                         <p class="p__email">
                             <label for="email">Your Email</label>
                             <span class="form__error" aria-live="polite"></span>
@@ -109,10 +109,10 @@ const frame_tr = "frame_tr";
         align-items: center;
     }
 
-    @mixin coordinates {
-        width: 16px;
-        margin-right: 12px;
-        opacity: .4;
+    @mixin coordinates($value: .4) {
+        width: $value * 40px;
+        margin-right: $value * 30px;
+        opacity: $value;
     }
 
     .container
@@ -124,7 +124,7 @@ const frame_tr = "frame_tr";
         padding: 32px 0 32px 32px;
 
         .container__inner {
-            width: math.percentage(0.5);
+            width: math.percentage(math.div(100px, 200px));
 
             @media(max-width: 940px) {
                 width: 100%;
@@ -190,14 +190,14 @@ const frame_tr = "frame_tr";
         }
     }
 
-    .form__inner--row,
-    .form__inner--column .p__email,
-    .form__inner--column .p__message
+    .form__inner--half,
+    .form__inner--full .p__email,
+    .form__inner--full .p__message
     {
         margin-bottom: 24px;
     }
 
-    .form__inner--row
+    .form__inner--half
     {
         display: flex;
         justify-content: space-between;
@@ -220,7 +220,7 @@ const frame_tr = "frame_tr";
         }
     }
 
-    .form__inner--column
+    .form__inner--full
     {
         .p__email, .p__message {
             @include aligned;
@@ -233,10 +233,10 @@ const frame_tr = "frame_tr";
         }
     }
 
-    .form__inner--row .p__name input,
-    .form__inner--row .p__job input,
-    .form__inner--column .p__email input,
-    .form__inner--column .p__message textarea
+    .form__inner--half .p__name input,
+    .form__inner--half .p__job input,
+    .form__inner--full .p__email input,
+    .form__inner--full .p__message textarea
     {
         font-family: vars.$primary-font;
         font-size: calc(.56rem + .36vw);
@@ -249,15 +249,15 @@ const frame_tr = "frame_tr";
         opacity: .8;
     }
 
-    .form__inner--row .p__name input:focus,
-    .form__inner--row .p__job input:focus,
-    .form__inner--column .p__email input:focus,
-    .form__inner--column .p__message textarea:focus
+    .form__inner--half .p__name input:focus,
+    .form__inner--half .p__job input:focus,
+    .form__inner--full .p__email input:focus,
+    .form__inner--full .p__message textarea:focus
     {
         outline: none;
     }
 
-    .form__inner--column .p__message textarea
+    .form__inner--full .p__message textarea
     {
         height: calc(60vh - 360px);
         resize: none;
@@ -265,13 +265,13 @@ const frame_tr = "frame_tr";
         vertical-align: top;
     }
 
-    .form__inner--column .form__submit
+    .form__inner--full .form__submit
     {
         @include aligned;
         justify-content: space-between;
     }
 
-    .form__inner--column .form__submit button
+    .form__inner--full .form__submit button
     {
         font-size: 1rem;
         color: vars.$bg-color;
@@ -286,7 +286,7 @@ const frame_tr = "frame_tr";
         }
     }
 
-    .form__inner--column .form__submit svg
+    .form__inner--full .form__submit svg
     {
         width: 40px;
     }
