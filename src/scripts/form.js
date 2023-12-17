@@ -8,6 +8,7 @@ document.addEventListener("astro:page-load", () => {
 
     // MOBILE //
     const metaViewport = document.querySelector("meta[name=viewport]");
+    const initialHeight = "100vh";
     metaViewport.setAttribute("content", "height=" + initialHeight + "px, width = device-width, initial-scale=1.0");
 
     if (href === "http://localhost:4321/contact/" || href === "https://portfolio-pm.fr/contact/")
