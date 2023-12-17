@@ -102,6 +102,7 @@ const frame_tr = "frame_tr";
 
 <style lang="scss">
     @use "../styles/vars";
+    @use "sass:math";
 
     @mixin aligned {
         display: flex;
@@ -116,11 +117,19 @@ const frame_tr = "frame_tr";
 
     .container
     {
+        @include aligned;
         position: relative;
-        display: flex;
         width: 72vw;
         height: 72vh;
         padding: 32px 0 32px 32px;
+
+        .container__inner {
+            width: math.percentage(0.5);
+
+            @media(max-width: 940px) {
+                width: 100%;
+            }
+        }
 
         p {
             font-size: calc(.6rem + .36vw);
@@ -133,11 +142,10 @@ const frame_tr = "frame_tr";
         svg {
             fill: vars.$font-color;
         }
-    }
 
-    .container__inner
-    {
-        width: 50%;
+        @media(max-width: 940px) {
+            padding: 32px;
+        }
     }
 
     .container__inner--left
@@ -151,8 +159,8 @@ const frame_tr = "frame_tr";
         .container__form {
             padding: 24px;
             border-radius: 24px;
-            background: vars.$bg-color;
-            box-shadow: 4px 4px 12px vars.$shadow-color;
+            background: var(--clr-bg);
+            box-shadow: 4px 4px 12px var(--clr-shadow);
         }
     }
 
@@ -176,6 +184,10 @@ const frame_tr = "frame_tr";
         .incomplete {
             display: none;
         }
+
+        @media(max-width: 940px) {
+            height: 90%;
+        }
     }
 
     .form__inner--row,
@@ -195,6 +207,16 @@ const frame_tr = "frame_tr";
             flex-wrap: wrap;
             justify-content: space-between;
             width: 47.5%;
+
+            @media(max-width: 940px) {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 940px) {
+            display: block;
+            margin-bottom: 12px;
         }
     }
 
@@ -204,6 +226,10 @@ const frame_tr = "frame_tr";
             @include aligned;
             flex-wrap: wrap;
             justify-content: space-between;
+
+            @media(max-width: 940px) {
+                margin-bottom: 12px;
+            }
         }
     }
 
@@ -253,16 +279,17 @@ const frame_tr = "frame_tr";
         padding: 12px 18px;
         border: none;
         border-radius: 32px;
+
+        @media(max-width: 940px) {
+            font-size: calc(.64rem + .36vw);
+            padding: 8px 12px;
+        }
     }
 
     .form__inner--column .form__submit svg
     {
         width: 40px;
     }
-
-
-
-
 
     .container__inner--right
     {
@@ -273,6 +300,10 @@ const frame_tr = "frame_tr";
             position: relative;
             width: 100%;
             height: 38vh;
+        }
+
+        @media(max-width: 940px) {
+            display: none;
         }
     }
 
@@ -367,48 +398,6 @@ const frame_tr = "frame_tr";
 
         .svg__envelop {
             @include coordinates;
-        }
-    }
-
-    @media(max-width: 940px)
-    {
-        .container {
-            padding: 32px;
-        }
-
-        .container__inner--left {
-            width: 100%;
-        }
-
-        .container__inner--left .container__form {
-            height: 90%;
-        }
-
-        .container__inner--left .container__form .form__inner--row {
-            display: block;
-        }
-
-        .container__inner--left .container__form .form__inner--row,
-        .container__inner--left .container__form .form__inner--column .p__email,
-        .container__inner--left .container__form .form__inner--column .p__message {
-            margin-bottom: 12px;
-        }
-
-        .container__inner--left .container__form .form__inner--row .p__name,
-        .container__inner--left .container__form .form__inner--row .p__job
-        {
-            width: 100%;
-            margin-bottom: 12px;
-        }
-
-        .container__inner--left .container__form .form__inner--column .form__submit button
-        {
-            font-size: calc(.64rem + .36vw);
-            padding: 8px 12px;
-        }
-
-        .container__inner--right {
-            display: none;
         }
     }
 </style>
