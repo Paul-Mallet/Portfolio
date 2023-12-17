@@ -140,7 +140,7 @@ const frame_tr = "frame_tr";
         }
 
         svg {
-            fill: vars.$font-color;
+            fill: var(--clr-font);
         }
 
         @media(max-width: 940px) {
@@ -310,11 +310,11 @@ const frame_tr = "frame_tr";
     .inner__paths
     {
         path:first-child {
-            stroke: vars.$bg-color;
+            stroke: var(--clr-bg);
         }
 
         path:last-child {
-            stroke: vars.$font-color;
+            stroke: var(--clr-font);
         }
 
         .svg__plane-line {
