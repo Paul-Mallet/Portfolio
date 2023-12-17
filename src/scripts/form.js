@@ -6,12 +6,6 @@ gsap.registerPlugin(MotionPathPlugin);
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
-    // MOBILE //
-    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-    document.documentElement.style.height = h + "px";
-    document.body.style.height = h + "px";
-
     if (href === "http://localhost:4321/contact/" || href === "https://portfolio-pm.fr/contact/")
     {
         // VALIDATIONS //
