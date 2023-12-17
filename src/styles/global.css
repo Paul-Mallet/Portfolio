@@ -6,11 +6,11 @@
   --clr-bg: #ecf0f3;
   --clr-font: #1a1a1a;
   --clr-shadow: rgb(186, 196, 214);
+  --clr-input: #d6dee9;
   --clr-span: #de4900;
   /*Fonts*/
   --ff-primary: 'Roboto Mono', monospace;
 }
-
 
 .dark
 {

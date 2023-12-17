@@ -10,35 +10,35 @@ const frame_tr = "frame_tr";
 <BaseLayout pageTitle={pageTitle} width={width} height={height} frame_tr={frame_tr}>
     <Frame width={width} height={height} frame_tr={frame_tr}>
         <div class="container">
-            <div class="left">
-                <h1>Contact<span style="color: #de4900;">.</span></h1>
-                <form class="form" method="post" novalidate>
-                    <div class="name_job">
-                        <p class="name_left">
+            <div class="container__inner container__inner--left"><!-- -->
+                <h1 class="container__h1">Contact<span style="color: #de4900;">.</span></h1>
+                <form class="container__form" method="post" novalidate>
+                    <div class="form__inner form__inner--row">
+                        <p class="p__name">
                             <label for="name">Your Name</label>
-                            <span class="error" aria-live="polite"></span>
+                            <span class="form__error" aria-live="polite"></span>
                             <input type="text" id="name" name="user_name" maxlength="56" placeholder="ex: Paul Mallet" required></input>
                         </p>
-                        <p class="job_right">
+                        <p class="p__job">
                             <label for="job">Your Job</label>
-                            <span class="error" aria-live="polite"></span>
+                            <span class="form__error" aria-live="polite"></span>
                             <input type="text" id="job" name="user_job" maxlength="56" placeholder="ex: Software Engineer" required></input>
                         </p>
                     </div>
-                    <div class="others">
-                        <p class="email">
+                    <div class="form__inner form__inner--column">
+                        <p class="p__email">
                             <label for="email">Your Email</label>
-                            <span class="error" aria-live="polite"></span>
+                            <span class="form__error" aria-live="polite"></span>
                             <input type="email" id="email" name="user_email" minlength="8" maxlength="56" placeholder="ex: email@gmail.com" required></input>
                         </p>
-                        <p class="message">
+                        <p class="p__message">
                             <label for="message">Your Message</label>
-                            <span class="error" aria-live="polite"></span>
+                            <span class="form__error" aria-live="polite"></span>
                             <textarea id="message" name="user_message" maxlength="320" placeholder="Type your request here..." spellcheck="false" required></textarea>
                         </p>
-                        <div class="submit_btn">
-                            <button type="submit" class="g-recaptcha" data-sitekey="6LelWw8pAAAAAL5N8d6uQ0sAZy6JFIuZm4moPaPo">Send Message</button>
-                            <svg class="error incomplete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <div class="form__submit">
+                            <button type="submit">Send Message</button>
+                            <svg class="form__error incomplete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
                             </svg>
                             <svg class="valid incomplete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -48,28 +48,28 @@ const frame_tr = "frame_tr";
                     </div>
                 </form>
             </div>
-            <div class="right">
-                <div class="send_anim">
-                    <svg class="plane-line" style="z-index: 1;" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
+            <div class="container__inner container__inner--right">
+                <div class="inner__paths">
+                    <svg class="svg__plane-line" style="z-index: 1;" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke-width="30" stroke-dasharray="40 40" />
                         <g id="plane">
                             <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/>
                         </g>
                     </svg>
-                    <svg class="plane-line" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
-                        <path id="path" class="" d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" />
+                    <svg class="svg__plane-line" width="100%" height="100%" viewBox="0 0 2028 838" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path" d="M8 710.855C182.5 912.688 1011.73 736.855 1193 469.855C1441.15 104.355 891.401 -221.645 647 230.355C517.5 469.855 784.5 827.355 1193 827.355C1575 827.355 1816 664.855 2018.5 336.355" fill="none" stroke="#1A1A1A" stroke-width="20" />
                     </svg>
-                    <svg class="cloud top" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg__cloud svg__cloud--top" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 336C0 415.5 64.5 480 144 480H512C582.7 480 640 422.7 640 352C640 290.1 596 238.4 537.6 226.6C541.7 215.9 544 204.2 544 192C544 139 501 96 448 96C428.3 96 409.9 102 394.7 112.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192C96 194.7 96.1 197.4 96.2 200.1C40.2 219.8 0 273.2 0 336Z"/>
                     </svg>
-                    <svg class="cloud bot" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg__cloud svg__cloud--bot" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 336C0 415.5 64.5 480 144 480H512C582.7 480 640 422.7 640 352C640 290.1 596 238.4 537.6 226.6C541.7 215.9 544 204.2 544 192C544 139 501 96 448 96C428.3 96 409.9 102 394.7 112.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192C96 194.7 96.1 197.4 96.2 200.1C40.2 219.8 0 273.2 0 336Z"/>
                     </svg>
                 </div>
-                <div class="infos">
-                    <div class="my_address">
+                <div class="inner__coordinates">
+                    <div class="inner__address">
                         <span>
-                            <svg class="address" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <svg class="svg__address" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                 <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
                             </svg>
                         </span>
@@ -78,17 +78,17 @@ const frame_tr = "frame_tr";
                             Normandie, France
                         </p>
                     </div>
-                    <p class="my_phone">
+                    <p class="p__phone">
                         <span>
-                            <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg class="svg__phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
                             </svg>
                         </span>
                         +33 7 66 28 44 60
                     </p>
-                    <p class="my_email">
+                    <p class="p__email">
                         <span>
-                            <svg class="envelop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg class="svg__envelop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                             </svg>
                         </span>
@@ -100,7 +100,20 @@ const frame_tr = "frame_tr";
     </Frame>
 </BaseLayout>
 
-<style>
+<style lang="scss">
+    @use "../styles/vars";
+
+    @mixin aligned {
+        display: flex;
+        align-items: center;
+    }
+
+    @mixin coordinates {
+        width: 16px;
+        margin-right: 12px;
+        opacity: .4;
+    }
+
     .container
     {
         position: relative;
@@ -108,112 +121,100 @@ const frame_tr = "frame_tr";
         width: 72vw;
         height: 72vh;
         padding: 32px 0 32px 32px;
+
+        p {
+            font-size: calc(.6rem + .36vw);
+        }
+
+        span {
+            height: 16px;
+        }
+
+        svg {
+            fill: vars.$font-color;
+        }
     }
 
-    .left
+    .container__inner
     {
         width: 50%;
+    }
+
+    .container__inner--left
+    {
         z-index: 2;
+
+        .container__h1 {
+            margin-bottom: 12px;
+        }
+
+        .container__form {
+            padding: 24px;
+            border-radius: 24px;
+            background: vars.$bg-color;
+            box-shadow: 4px 4px 12px vars.$shadow-color;
+        }
     }
 
-    .right
+    .container__form
     {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
+        label {
+            font-size: calc(.72rem + .36vw);
+        }
+
+        .form__error {
+            color: vars.$span-color;
+            fill: vars.$span-color;
+        }
+
+        $color-green: #3EB489;
+        .valid {
+            color: $color-green;
+            fill: $color-green;
+        }
+
+        .incomplete {
+            display: none;
+        }
     }
 
-    p
-    {
-        font-size: calc(.60rem + .36vw);
-    }
-
-    svg
-    {
-        fill: var(--clr-font);
-    }
-
-    span
-    {
-        height: 16px;
-    }
-
-    .error
-    {
-        color: var(--clr-span);
-        fill: var(--clr-span);
-    }
-
-    .valid
-    {
-        color: #3EB489;
-        fill: #3EB489;
-    }
-
-    .incomplete
-    {
-        display: none;
-    }
-
-    .left h1
-    {
-        margin-bottom: 12px;
-    }
-
-    .left .form
-    {
-        padding: 24px;
-        border-radius: 24px;
-        background: var(--clr-bg);
-        box-shadow: 4px 4px 12px var(--clr-shadow);
-    }
-
-    .left .form label
-    {
-        font-size: calc(.72rem + .36vw);
-    }
-
-    .left .form .name_job,
-    .left .form .others .email,
-    .left .form .others .message
+    .form__inner--row,
+    .form__inner--column .p__email,
+    .form__inner--column .p__message
     {
         margin-bottom: 24px;
     }
 
-    .left .form .name_job
+    .form__inner--row
     {
         display: flex;
         justify-content: space-between;
+
+        .p__name, .p__job {
+            @include aligned;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 47.5%;
+        }
     }
 
-    .left .form .name_job .name_left,
-    .left .form .name_job .job_right
+    .form__inner--column
     {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 47.5%;
+        .p__email, .p__message {
+            @include aligned;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
-    .form .others .email,
-    .form .others .message
+    .form__inner--row .p__name input,
+    .form__inner--row .p__job input,
+    .form__inner--column .p__email input,
+    .form__inner--column .p__message textarea
     {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .left .form .name_job .name_left input,
-    .left .form .name_job .job_right input,
-    .left .form .others .email input,
-    .left .form .others .message textarea
-    {
-        font-family: 'Roboto Mono', monospace;
+        font-family: vars.$primary-font;
         font-size: calc(.56rem + .36vw);
-        background: #d6dee9;
+        background: vars.$input-color;
         width: 100%;
         margin-top: 4px;
         padding: 12px;
@@ -222,15 +223,15 @@ const frame_tr = "frame_tr";
         opacity: .8;
     }
 
-    .left .form .name_job .name_left input:focus,
-    .left .form .name_job .job_right input:focus,
-    .left .form .others .email input:focus,
-    .left .form .others .message textarea:focus
+    .form__inner--row .p__name input:focus,
+    .form__inner--row .p__job input:focus,
+    .form__inner--column .p__email input:focus,
+    .form__inner--column .p__message textarea:focus
     {
         outline: none;
     }
 
-    .left .form .others .message textarea
+    .form__inner--column .p__message textarea
     {
         height: calc(60vh - 360px);
         resize: none;
@@ -238,65 +239,90 @@ const frame_tr = "frame_tr";
         vertical-align: top;
     }
 
-    .left .form .others .submit_btn
+    .form__inner--column .form__submit
     {
-        display: flex;
-        align-items: center;
+        @include aligned;
         justify-content: space-between;
     }
 
-    .grecaptcha-badge
-    {
-        visibility: hidden !important;
-    }
-
-    .left .form .others .submit_btn button
+    .form__inner--column .form__submit button
     {
         font-size: 1rem;
-        color: #ecf0f3;
-        background: var(--clr-span);
+        color: vars.$bg-color;
+        background: vars.$span-color;
         padding: 12px 18px;
         border: none;
         border-radius: 32px;
     }
 
-    .left .form .others .submit_btn svg
+    .form__inner--column .form__submit svg
     {
         width: 40px;
     }
 
-    .right .send_anim
+
+
+
+
+    .container__inner--right
     {
-        position: relative;
-        width: 100%;
-        height: 38vh;
+        @include aligned;
+        flex-direction: column;
+
+        .inner__paths {
+            position: relative;
+            width: 100%;
+            height: 38vh;
+        }
     }
 
-    .right .send_anim path:first-child
+    .inner__paths
     {
-        stroke: var(--clr-bg);
+        path:first-child {
+            stroke: vars.$bg-color;
+        }
+
+        path:last-child {
+            stroke: vars.$font-color;
+        }
+
+        .svg__plane-line {
+            position: absolute;
+            height: calc(10vw + 40px);
+            top: calc(1.6vw + 36px);
+            left: calc(-2vw - 48px);
+            overflow: visible;
+        }
+
+        .svg__cloud {
+            position: absolute;
+            z-index: 3;
+        }
     }
 
-    .right .send_anim path:last-child
+    .svg__cloud
     {
-        stroke: var(--clr-font);
+        &--top {
+            top: 1.6vh;
+            left: 3.6vw;
+            width: calc( 24px + 3.2vw);
+        }
+
+        &--bot {
+            bottom: 4vh;
+            right: 3vw;
+            width: calc(36px + 3.6vw)
+        }
     }
 
-    .right .send_anim .plane-line
+    $strk-length: 4308;
+    $strk-style: round;
+    .inner__paths .svg__plane-line #path
     {
-        position: absolute;
-        height: calc(10vw + 40px);
-        top: calc(1.6vw + 36px);
-        left: calc(-2vw - 48px);
-        overflow: visible;
-    }
-
-    .right .send_anim .plane-line #path
-    {
-        stroke-dasharray: 4308;
-        stroke-dashoffset: 4308;
-        stroke-linecap: round;
-        stroke-linejoin: round;
+        stroke-dasharray: $strk-length;
+        stroke-dashoffset: $strk-length;
+        stroke-linecap: $strk-style;
+        stroke-linejoin: $strk-style;
     }
 
     .anim_path
@@ -306,56 +332,42 @@ const frame_tr = "frame_tr";
 
     @keyframes power1
     {
-        to
-        {
+        to {
             stroke-dashoffset: 0;
         }
     }
 
-    .right .send_anim .plane-line #plane
+    .inner__paths .svg__plane-line #plane
     {
         transform: scale(.4) translateX(-80vw);
     }
 
-    .right .send_anim .cloud
+    .inner__address
     {
-        position: absolute;
-        z-index: 3;
-    }
-
-    .right .send_anim .cloud.top
-    {
-        top: 1.6vh;
-        left: 3.6vw;
-        width: calc( 24px + 3.2vw);
-    }
-
-    .right .send_anim .cloud.bot
-    {
-        bottom: 4vh;
-        right: 3vw;
-        width: calc(36px + 3.6vw)
-    }
-
-    .right .my_address
-    {
-        display: flex;
+        @include aligned;
         margin-bottom: 8vh;
+
+        .svg__address {
+            @include coordinates;
+        }
     }
 
-    .right .my_email
+    .p__phone
     {
-        display: flex;
-        align-items: center;
+        @include aligned;
+
+        .svg__phone {
+            @include coordinates;
+        }
     }
 
-    .right .my_address .address,
-    .right .my_phone .phone,
-    .right .my_email .envelop
+    .p__email
     {
-        width: 16px;
-        margin-right: 12px;
-        opacity: .4;
+        @include aligned;
+
+        .svg__envelop {
+            @include coordinates;
+        }
     }
 
     @media(max-width: 940px)
@@ -365,42 +377,42 @@ const frame_tr = "frame_tr";
             padding: 32px;
         }
 
-        .left
+        .container__inner--left
         {
             width: 100%;
         }
 
-        .left .form
+        .container__inner--left .container__form
         {
             height: 90%;
         }
 
-        .left .form .name_job
+        .container__inner--left .container__form .form__inner--row
         {
             display: block;
         }
 
-        .left .form .name_job,
-        .left .form .others .email,
-        .left .form .others .message
+        .container__inner--left .container__form .form__inner--row,
+        .container__inner--left .container__form .form__inner--column .p__email,
+        .container__inner--left .container__form .form__inner--column .p__message
         {
             margin-bottom: 12px;
         }
 
-        .left .form .name_job .name_left,
-        .left .form .name_job .job_right
+        .container__inner--left .container__form .form__inner--row .p__name,
+        .container__inner--left .container__form .form__inner--row .p__job
         {
             width: 100%;
             margin-bottom: 12px;
         }
 
-        .left .form .others .submit_btn button
+        .container__inner--left .container__form .form__inner--column .form__submit button
         {
             font-size: calc(.64rem + .36vw);
             padding: 8px 12px;
         }
 
-        .right
+        .container__inner--right
         {
             display: none;
         }

@@ -1,0 +1,15 @@
+// Colors //
+$bg-color: #ecf0f3;
+$font-color: #1a1a1a;
+$shadow-color: rgb(186, 196, 214);
+$span-color: #de4900;
+$input-color: #d6dee9;
+// Font //
+$primary-font: 'Roboto Mono', monospace;
+
+.dark
+{
+    $bg-color: #1a1a1a;
+    $font-color: #ecf0f3;
+    $shadow-color: rbg(60, 72, 94);
+}
