@@ -231,12 +231,38 @@ const frame_tr = "frame_tr";
                 margin-bottom: 12px;
             }
         }
+
+        .form__submit {
+            @include aligned;
+            justify-content: space-between;
+        }
     }
 
-    .form__inner--half .p__name input,
-    .form__inner--half .p__job input,
-    .form__inner--full .p__email input,
-    .form__inner--full .p__message textarea
+    .form__submit
+    {
+        button {
+            font-size: 1rem;
+            color: vars.$bg-color;
+            background: vars.$span-color;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 32px;
+
+            @media(max-width: 940px) {
+                font-size: calc(.64rem + .36vw);
+                padding: 8px 12px;
+            }
+        }
+
+        .form__inner--full .form__submit svg {
+            width: 40px;
+        }
+    }
+
+    .p__name input,
+    .p__job input,
+    .p__email input,
+    .p__message textarea
     {
         font-family: vars.$primary-font;
         font-size: calc(.56rem + .36vw);
@@ -247,14 +273,10 @@ const frame_tr = "frame_tr";
         border: none;
         border-radius: 12px;
         opacity: .8;
-    }
 
-    .form__inner--half .p__name input:focus,
-    .form__inner--half .p__job input:focus,
-    .form__inner--full .p__email input:focus,
-    .form__inner--full .p__message textarea:focus
-    {
-        outline: none;
+        &:focus {
+            outline: none;
+        }
     }
 
     .form__inner--full .p__message textarea
@@ -263,32 +285,6 @@ const frame_tr = "frame_tr";
         resize: none;
         overflow: auto;
         vertical-align: top;
-    }
-
-    .form__inner--full .form__submit
-    {
-        @include aligned;
-        justify-content: space-between;
-    }
-
-    .form__inner--full .form__submit button
-    {
-        font-size: 1rem;
-        color: vars.$bg-color;
-        background: vars.$span-color;
-        padding: 12px 18px;
-        border: none;
-        border-radius: 32px;
-
-        @media(max-width: 940px) {
-            font-size: calc(.64rem + .36vw);
-            padding: 8px 12px;
-        }
-    }
-
-    .form__inner--full .form__submit svg
-    {
-        width: 40px;
     }
 
     .container__inner--right
