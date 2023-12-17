@@ -12,14 +12,14 @@ document.addEventListener("astro:page-load", () => {
         const form = document.querySelector("form");
         const name = document.querySelector("#name");
         const job = document.querySelector("#job");
-        const email = document.querySelector(".others #email");
-        const message = document.querySelector(".others #message");
-        const errName = document.querySelector(".name_left span");
-        const errJob = document.querySelector(".job_right span");
-        const errEmail = document.querySelector(".others .email span");
-        const errMessage = document.querySelector(".others .message span");
-        const validCheck = document.querySelector(".others .submit_btn .valid");
-        const errorCheck = document.querySelector(".others .submit_btn .error");
+        const email = document.querySelector("#email");
+        const message = document.querySelector("#message");
+        const errName = document.querySelector(".p__name span");
+        const errJob = document.querySelector(".p__job span");
+        const errEmail = document.querySelector(".form__inner--column .p__email span");
+        const errMessage = document.querySelector(".form__inner--column .p__message span");
+        const validCheck = document.querySelector(".form__inner--column .form__submit .valid");
+        const errorCheck = document.querySelector(".form__inner--column .form__submit .form__error");
 
         const tabInput = [name, job, email, message];
         const tabErr = [errName, errJob, errEmail, errMessage];
@@ -60,17 +60,17 @@ document.addEventListener("astro:page-load", () => {
                 if (tabInput[i].validity.valueMissing)
                 {
                     tabErr[i].innerText = "Required";
-                    tabErr[i].className = "error";
+                    tabErr[i].className = "form__error";
                 }
                 else if (tabInput[2].validity.typeMismatch)
                 {
                     tabErr[2].innerText = "Incorrect email";
-                    tabErr[2].className = "error";
+                    tabErr[2].className = "form__error";
                 }
                 else if(tabInput[2].validity.tooShort)
                 {
                     tabErr[2].innerText = "Too short email";
-                    tabErr[2].className = "error";
+                    tabErr[2].className = "form__error";
                 }
                 i++;
             }
@@ -102,8 +102,8 @@ document.addEventListener("astro:page-load", () => {
                 validCheck.classList.remove("incomplete");
 
                 // GSAP //
-                const plane = document.querySelector(".right .send_anim .plane-line #plane");
-                const path = document.querySelector(".right .send_anim .plane-line #path");
+                const plane = document.querySelector(".container__inner--right .send_anim .svg__plane-line #plane");
+                const path = document.querySelector(".container__inner--right .send_anim .svg__plane-line #path");
 
                 gsap.to(plane, {
                     duration: 2.4,
