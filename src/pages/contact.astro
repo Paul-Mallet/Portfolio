@@ -140,10 +140,29 @@ const frame_tr = "frame_tr";
         }
 
         .container__inner {
+            position: relative;
             width: math.percentage(math.div(100px, 200px));
 
             @media(max-width: 940px) {
                 width: 100%;
+            }
+            @media(max-height: 650px) {
+                margin-top: 10vh;
+            }
+            @media(max-height: 550px) {
+                margin-top: 18vh;
+            }
+            @media(max-height: 500px) {
+                margin-top: 48vh;
+            }
+            @media(max-height: 450px) {
+                margin-top: 58vh;
+            }
+            @media(max-height: 400px) {
+                margin-top: 70vh;
+            }
+            @media(max-height: 350px) {
+                margin-top: 85vh;
             }
         }
 
