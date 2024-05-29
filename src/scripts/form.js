@@ -5,8 +5,8 @@ gsap.registerPlugin(MotionPathPlugin);
 
 document.addEventListener("astro:page-load", () => {
     const path = window.location.pathname;
-    console.log(path);
-    if (path === "/contact") {
+    const regex = /^\/contact(|\/)$/g;
+    if (regex.test(path)) {
         // VALIDATIONS //
         const form = document.querySelector("form");
         const name = document.querySelector("#name");
