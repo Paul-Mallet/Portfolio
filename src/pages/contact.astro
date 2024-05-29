@@ -74,7 +74,6 @@ const frame_tr = "frame_tr";
                             </svg>
                         </span>
                         <p>
-                            76190 Hautot Saint Sulpice</br>
                             Normandie, France
                         </p>
                     </div>
@@ -171,6 +170,7 @@ const frame_tr = "frame_tr";
         }
 
         span {
+            @include aligned;
             height: 16px;
         }
 
@@ -190,6 +190,10 @@ const frame_tr = "frame_tr";
         .container__h1 {
             position: relative;
             margin-bottom: 12px;
+
+            span {
+                display: inline-block;
+            }
         }
 
         .container__form {

@@ -1,7 +1,9 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "portfolio",
+  "description": "A simple web portfolio using the magic of ViewTransition API",
+  "author": "Paul Mallet",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,5 +16,6 @@
     "emailjs": "^4.0.3",
     "gsap": "^3.12.2",
     "sass": "^1.69.5"
-  }
+  },
+  "license": "MIT"
 }
