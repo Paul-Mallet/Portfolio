@@ -4,10 +4,8 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(MotionPathPlugin);
 
 document.addEventListener("astro:page-load", () => {
-    const href = window.location.href;
-
-    if (href === "http://localhost:4321/contact/" || href === "https://portfolio-pm.fr/contact/")
-    {
+    const path = window.location.pathname;
+    if (path === "/contact") {
         // VALIDATIONS //
         const form = document.querySelector("form");
         const name = document.querySelector("#name");
@@ -16,70 +14,42 @@ document.addEventListener("astro:page-load", () => {
         const message = document.querySelector("#message");
         const errName = document.querySelector(".p__name span");
         const errJob = document.querySelector(".p__job span");
-        const errEmail = document.querySelector(".form__inner--column .p__email span");
-        const errMessage = document.querySelector(".form__inner--column .p__message span");
-        const validCheck = document.querySelector(".form__inner--column .form__submit .valid");
-        const errorCheck = document.querySelector(".form__inner--column .form__submit .form__error");
+        const errEmail = document.querySelector(".form__inner .p__email span");
+        const errMessage = document.querySelector(".form__inner .p__message span");
+        const validCheck = document.querySelector(".form__inner .form__submit .valid");
+        const errorCheck = document.querySelector(".form__inner .form__submit .form__error");
 
         const tabInput = [name, job, email, message];
         const tabErr = [errName, errJob, errEmail, errMessage];
 
-        name.addEventListener("input", () => {
-            if (name.validity.valid)
-            {
-                errName.innerText = "";
-                errName.className = "";
-            }
-        }, false);
-        job.addEventListener("input", () => {
-            if (job.validity.valid)
-            {
-                errJob.innerText = "";
-                errJob.className = "";
-            }
-        }, false);
-        email.addEventListener("input", () => {
-            if (email.validity.valid)
-            {
-                errEmail.innerText = "";
-                errEmail.className = "";
-            }
-        }, false);
-        message.addEventListener("input", () => {
-            if (message.validity.valid)
-            {
-                errMessage.innerText = "";
-                errMessage.className = "";
-            }
-        }, false);
+        tabInput.map((input, index) => {
+            input.addEventListener("input", () => {
+                if(name.validity.valid) {
+                    console.log(index)
+                    tabErr[index].innerText = "";
+                    tabErr[index].className = "";
+                }
+            });
+        });
 
         form.addEventListener("submit", (e) => {
+            e.preventDefault();
             let i = 0;
-            while (i < tabInput.length)
-            {
-                if (tabInput[i].validity.valueMissing)
-                {
+            while(i < tabInput.length) {
+                if(tabInput[i].validity.valueMissing) {
                     tabErr[i].innerText = "Required";
                     tabErr[i].className = "form__error";
-                }
-                else if (tabInput[2].validity.typeMismatch)
-                {
+                } else if(tabInput[2].validity.typeMismatch) {
                     tabErr[2].innerText = "Incorrect email";
                     tabErr[2].className = "form__error";
-                }
-                else if(tabInput[2].validity.tooShort)
-                {
+                } else if(tabInput[2].validity.tooShort) {
                     tabErr[2].innerText = "Too short email";
                     tabErr[2].className = "form__error";
                 }
                 i++;
             }
             if (name.validity.valid && job.validity.valid
-            && email.validity.valid && message.validity.valid)
-            {
-                e.preventDefault();
-
-                // reCAPTCHA...//
+            && email.validity.valid && message.validity.valid) {
                 // SEND TO EMAILJS //
                 emailjs.send("service_x2gl58f","template_4zto3qq", {
                     user_name: name.value,
@@ -93,10 +63,9 @@ document.addEventListener("astro:page-load", () => {
                     console.log('FAILED...', error);
                 });
 
-                name.value = "";
-                job.value = "";
-                email.value = "";
-                message.value = "";
+                tabInput.map(i => {
+                    i.value = "";
+                });
 
                 errorCheck.classList.add("incomplete");
                 validCheck.classList.remove("incomplete");
@@ -117,13 +86,10 @@ document.addEventListener("astro:page-load", () => {
                 });
 
                 path.classList.add("anim_path");
-            }
-            else
-            {
+            } else {
                 validCheck.classList.add("incomplete");
                 errorCheck.classList.remove("incomplete");
             }
-            e.preventDefault();
         });
     }
 });

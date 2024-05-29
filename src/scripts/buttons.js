@@ -1,15 +1,14 @@
 import { gsap } from "gsap";
 
 document.addEventListener("astro:page-load", () => {
-    const href = window.location.href;
+    const path = window.location.pathname;
     const dlMode_btn = document.querySelector(".left .dl_mode");
     const signature_div = document.querySelector(".left .signature");
     const sound_btn = document.querySelector(".right .sound");
     const socials_links = document.querySelector(".right .hand_socials");
  
     // HANDWRITING //
-    if (href === "http://localhost:4321/" || href === "https://portfolio-pm.fr/")
-    {
+    if(path === "/") {
         const dlMode = document.querySelector(".dl-mode");
         dlMode_btn.addEventListener("mouseover", () => {
             dlMode.classList.remove("disp");
@@ -39,14 +38,11 @@ document.addEventListener("astro:page-load", () => {
     dlMode_btn.addEventListener("click", () => {
         doc.classList.toggle("dark");
 
-        if (doc.classList.contains("dark"))
-        {
+        if(doc.classList.contains("dark")) {
             gsap.to(dark_icon, { duration: .24, opacity: 0, scale: 0, ease: "back.in", });
             gsap.to(light_icon, { delay: .16, duration: .24, opacity: .4, scale: 1, ease: "back.out", });
             localStorage.setItem("theme", "dark");
-        }
-        else
-        {
+        } else {
             gsap.to(light_icon, { duration: .24, opacity: 0, scale: 0, ease: "back.in", });
             gsap.to(dark_icon, { delay: .16, duration: .24, opacity: .4, scale: 1, ease: "back.out", });
             localStorage.setItem("theme", "");
@@ -58,13 +54,10 @@ document.addEventListener("astro:page-load", () => {
 
     function getUrl()
     {
-        if (href === "http://localhost:4321/" || href === "https://portfolio-pm.fr/")
-        {
+        if(path === "/") {
             signature_container.firstChild.classList.remove("none");
             signature_container.lastChild.classList.add("none");
-        }
-        else
-        {
+        } else {
             signature_container.firstChild.classList.add("none");
             signature_container.lastChild.classList.remove("none");
         }
@@ -77,13 +70,11 @@ document.addEventListener("astro:page-load", () => {
     const words = str.split(" ");
     let i = 0;
 
-    while (i < words.length)
-    {
+    while (i < words.length) {
         const div = document.createElement("div");
         div.setAttribute("style", "position:relative;display:inline-block;");
         let j = 0;
-        while (j < words[i].length)
-        {
+        while (j < words[i].length) {
             const inDiv = document.createElement("div");
             inDiv.setAttribute("style", "position:relative;display:inline-block;");
             inDiv.textContent = words[i][j];
@@ -109,12 +100,10 @@ document.addEventListener("astro:page-load", () => {
     const backLink = document.querySelector(".left .hand_signature a");
 
     document.addEventListener("keydown", (e) => {
-        if (e.defaultPrevented)
-        {
+        if (e.defaultPrevented) {
             return;
         }
-        if (e.key === "Escape")
-        {
+        if (e.key === "Escape") {
             backLink.click();
         }
         return;
@@ -124,16 +113,12 @@ document.addEventListener("astro:page-load", () => {
     const audio = document.querySelector(".hand_sound button audio");
     sound_btn.addEventListener("click", toggle);
 
-    function toggle()
-    {
+    function toggle() {
         const not_svg = document.querySelector(".hand_sound button .not")
-        if (not_svg.getAttribute("class") === "not none")
-        {
+        if (not_svg.getAttribute("class") === "not none") {
             audio.pause();
             not_svg.classList.remove("none");
-        }
-        else
-        {
+        } else {
             audio.play();
             audio.volume = 0.03;
             not_svg.classList.add("none");
