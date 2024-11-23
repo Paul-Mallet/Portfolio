@@ -1,6 +1,6 @@
 # Paul Mallet's Portfolio
 
-In this portfolio I'ld like to test as many scripts as I could to improve my JS skill, but I'ld like to create my own experience too. You'll find 4 different pages on this website: homepage, about me, projects and contact form. Each of them are available just by clicking on links of the nav menu of the homepage. Feel free to check the website on [this link](https://portfolio-pm.fr/) 😃.
+In this portfolio I'ld like to test as many scripts as I could to improve my JS skill, but I'ld like to create my own experience too. You'll find 4 different pages on this website: homepage, about me, projects and contact form. Each of them are available just by clicking on links of the nav menu of the homepage. Feel free to check the website on [this link](https://portfolio-pm.com/) 😃.
 
 My personal social accounts:
 
