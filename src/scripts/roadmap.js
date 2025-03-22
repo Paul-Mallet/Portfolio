@@ -5,7 +5,7 @@ document.addEventListener("astro:page-load", () => {
 
     if (href === "http://localhost:4321/about"
         || href === "https://portfolio-pm.com/about"
-        || href === "https://paul-mallet.netlify.app/about")
+        || href === "https://paul-mallet.netlify.app/about/")
     {
         // NEXT-BTN //
         const path = document.querySelector(".about_line #path");
