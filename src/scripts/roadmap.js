@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
-    if (href === "http://localhost:4321/about/" || href === "https://portfolio-pm.fr/about/")
+    if (href === "http://localhost:4321/about" || href === "https://portfolio-pm.com/about")
     {
         // NEXT-BTN //
         const path = document.querySelector(".about_line #path");

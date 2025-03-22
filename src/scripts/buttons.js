@@ -55,11 +55,11 @@ document.addEventListener("astro:page-load", () => {
     function getUrl()
     {
         if(path === "/") {
-            signature_container.firstChild.classList.remove("none");
-            signature_container.lastChild.classList.add("none");
+            signature_container.firstElementChild.classList.remove("none");
+            signature_container.lastElementChild.classList.add("none");
         } else {
-            signature_container.firstChild.classList.add("none");
-            signature_container.lastChild.classList.remove("none");
+            signature_container.firstElementChild.classList.add("none");
+            signature_container.lastElementChild.classList.remove("none");
         }
     }
     getUrl();
