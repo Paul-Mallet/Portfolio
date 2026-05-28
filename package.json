@@ -12,10 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.4.0",
+    "astro": "^6.3.8",
     "emailjs": "^4.0.3",
-    "gsap": "^3.12.2",
-    "sass": "^1.69.5"
+    "gsap": "^3.15.0",
+    "sass": "^1.100.0"
   },
   "license": "MIT"
 }
