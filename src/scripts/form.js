@@ -1,6 +1,9 @@
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
+// @ts-ignore emailjs is loaded from CDN in contact.astro
+const emailjs = window.emailjs;
+
 gsap.registerPlugin(MotionPathPlugin);
 
 document.addEventListener("astro:page-load", () => {
