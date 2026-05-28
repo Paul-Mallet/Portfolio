@@ -52,8 +52,7 @@ document.addEventListener("astro:page-load", () => {
     // SIGNATURE //
     const signature_container = document.querySelector(".left .hand_signature");
 
-    function getUrl()
-    {
+    function getUrl() {
         if(path === "/") {
             signature_container.firstElementChild.classList.remove("none");
             signature_container.lastElementChild.classList.add("none");
@@ -72,19 +71,23 @@ document.addEventListener("astro:page-load", () => {
 
     while (i < words.length) {
         const div = document.createElement("div");
-        div.setAttribute("style", "position:relative;display:inline-block;");
+
+        div.setAttribute("style", "position:relative;display:inline-flex;");
+
         let j = 0;
         while (j < words[i].length) {
             const inDiv = document.createElement("div");
+
             inDiv.setAttribute("style", "position:relative;display:inline-block;");
             inDiv.textContent = words[i][j];
+
             if (words[i][j] === ".")
-            {
                 inDiv.style.color = "#de4900";
-            }
+
             div.append(inDiv);
             j++;
         }
+
         containerSign.append(div);
         i++;
     }
@@ -93,6 +96,9 @@ document.addEventListener("astro:page-load", () => {
     const divsBack = document.querySelectorAll(".left .hand_signature a .back div div");
     const divIcon = document.querySelector(".left .hand_signature a .icon");
 
+    if (!divsSign || !divsBack || !divIcon)
+        console.error("Failed to select signature's div(s)");
+
     gsap.from(divsSign, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
     gsap.from(divsBack, { duration: 0.72, opacity: 0, scale: 0, y: 80, rotationX: 180, transformOrigin: "0% 50% -50", ease: "back.out", stagger: 0.02 });
     gsap.from(divIcon, { delay: 0.24, duration: 0.48, opacity: 0, scale: 0, x: 40, transformOrigin: "0% 50%", ease: "back.out" });
@@ -100,12 +106,10 @@ document.addEventListener("astro:page-load", () => {
     const backLink = document.querySelector(".left .hand_signature a");
 
     document.addEventListener("keydown", (e) => {
-        if (e.defaultPrevented) {
+        if (e.defaultPrevented)
             return;
-        }
-        if (e.key === "Escape") {
+        if (e.key === "Escape")
             backLink.click();
-        }
         return;
     });
 
