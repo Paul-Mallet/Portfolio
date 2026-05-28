@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Buttons from "../components/Buttons.astro";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
@@ -16,7 +16,7 @@ const { pageTitle } = Astro.props;
     <!--<link rel="mask-icon" href="mask-icon.svg" color="#000000">-->
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     <title>{pageTitle}</title>
-    <ViewTransitions />
+    <ClientRouter />
 </head>
 <body>
     <script>
@@ -24,11 +24,13 @@ const { pageTitle } = Astro.props;
         const light_icon = document.querySelector(".left .dl_mode .light_icon");
         const setDarkMode = () => {
             const theme = localStorage.getItem("theme");
-            document.documentElement.className = theme;
-            if (theme === "dark")
-            {
-                dark_icon.setAttribute("style", "opacity:0;");
-                light_icon.setAttribute("style", "opacity:.4;scale:1;");
+
+            if (theme)
+                document.documentElement.className = theme;
+
+            if (theme === "dark") {
+                dark_icon?.setAttribute("style", "opacity:0;");
+                light_icon?.setAttribute("style", "opacity:.4;scale:1;");
             }
         };
         setDarkMode();
