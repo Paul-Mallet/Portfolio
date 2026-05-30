@@ -6,7 +6,7 @@ document.addEventListener("astro:page-load", () => {
     if (href === "http://localhost:4321/projects"
         || href === "http://localhost:4321/projects/little-javascript"
         || href === "https://portfolio-pm.com/projects"
-        || href === "https://paul-mallet.netlify.app/projects/")
+        || href === "https://paul-mallet.netlify.app/projects/little-javascript")
     {
         // FAQ DIV //
         const body = document.querySelector("body");
