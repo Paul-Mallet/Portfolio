@@ -4,8 +4,11 @@ import Frame from "../../components/Frame.astro";
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ routePattern }) {
   const projects = await getCollection('projects');
+
+  console.log(routePattern);
+
   return projects.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
@@ -14,14 +17,17 @@ export async function getStaticPaths() {
 
 type Props = { entry: CollectionEntry<'projects'> };
 
-console.log(Astro.props);
-
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { title, tech_stack, description, links, created_at, progress, script } = entry.data;
 
-const width = "72vw";
-const height = "72vh";
+const projects = await getCollection('projects');
+const index = projects.findIndex((p) => p.id === entry.id);
+const prev = index > 0 ? projects[index - 1] : null;
+const next = index < projects.length - 1 ? projects[index + 1] : null;
+
+const width = "72dvw";
+const height = "72dvh";
 const frame_tr = "frame_tr";
 ---
 
@@ -69,9 +75,40 @@ const frame_tr = "frame_tr";
             <div class="right">
                 <Content />
             </div>
+            
         </section>
     </Frame>
-    <script src="../../scripts/project_scripts.js" />
+    <nav class="pagination">
+        {prev && (
+            <a class="page prev" href={`/projects/${prev.id}`} aria-label="Previous project">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 256">
+                    <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path>
+                </svg>
+            </a>
+        )}
+        {next && (
+            <a class="page next" href={`/projects/${next.id}`} aria-label="Next project">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 256">
+                    <path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"></path>
+                </svg>
+            </a>
+        )}
+    </nav>
+    <meta id="project-script" data-script={script} />
+    <script>
+        const modules = import.meta.glob('/src/scripts/projects/*.js');
+
+        document.addEventListener('astro:page-load', async () => {
+            const meta = document.getElementById('project-script');
+            if (!meta) return;
+
+            const load = modules[`/src/scripts/projects/${meta.dataset.script}`];
+            if (!load) return;
+
+            const mod = await load();
+            mod.default?.();
+        });
+    </script>
 </BaseLayout>
 
 <style lang="scss">
@@ -80,21 +117,73 @@ const frame_tr = "frame_tr";
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 72vw;
-        height: 72vh;
+        width: 72dvw;
+        height: 72dvh;
         padding: 32px;
     }
 
     h1
     {
-        display: flex;
-        margin-bottom: 3.2vh;
+        // display: flex;
+        margin-bottom: 3.2dvh;
     }
 
     .dot
     {
         color: var(--clr-span);
         margin: 0;
+    }
+
+        .pagination
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        width: 72vw;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .pagination .page
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(32px + 1.2vw);
+        height: calc(32px + 1.2vw);
+        font-size: calc(1rem + 1.2vw);
+        background: var(--clr-bg);
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px var(--clr-shadow);
+        pointer-events: auto;
+    }
+
+    .pagination .page:active
+    {
+        box-shadow: none;
+    }
+
+    .pagination .page svg
+    {
+        fill: var(--clr-font);
+        opacity: .4;
+    }
+
+    .pagination .prev
+    {
+        margin-right: auto;
+        transform: translateX(-50%);
+    }
+
+    .pagination .next
+    {
+        margin-left: auto;
+        transform: translateX(50%);
     }
 
     .left,
@@ -288,9 +377,21 @@ const frame_tr = "frame_tr";
         .left .links .all,
         .left .created_at p,
         .progress_bar,
-        .left .progress p
-        {
+        .left .progress p {
             margin-top: 0;
+        }
+
+        .left .data div {
+            display: block;
+            margin-top: 16px;
+        }
+
+        .left .data div:first-child {
+            margin-top: 0;
+        }
+
+        .left .data .progress_bar {
+            margin-top: 2px;
         }
     }
 </style>
