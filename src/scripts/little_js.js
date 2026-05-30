@@ -4,6 +4,7 @@ document.addEventListener("astro:page-load", () => {
     const href = window.location.href;
 
     if (href === "http://localhost:4321/projects"
+        || href === "http://localhost:4321/projects/little-javascript"
         || href === "https://portfolio-pm.com/projects"
         || href === "https://paul-mallet.netlify.app/projects/")
     {
