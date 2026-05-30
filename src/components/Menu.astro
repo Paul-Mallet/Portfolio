@@ -4,9 +4,13 @@ const menu = ["about", "projects", "contact"];
 
 <nav>
     <ul>
-        {menu.map((link) =>
-            <li><a href={"/" + (link)}>{link}</a></li>
-        )}
+        {
+            menu.map((link) => (
+                <li><a href={ link === "projects" ? "/" + (link) + "/little-javascript" : "/" + (link) }>
+                    {link}
+                </a></li>
+            ))
+        }
     </ul>
 </nav>
 
